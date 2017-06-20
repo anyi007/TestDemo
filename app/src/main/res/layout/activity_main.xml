@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context="com.example.lql.testdemo.MainActivity">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="Glide 4.x"
+            android:id="@+id/glide_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:text="热词 商品规格选择"
+            android:id="@+id/hotwords_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:layout_marginLeft="10dp"
+            android:text="修饰下seekbar"
+            android:id="@+id/seekbar_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/px_10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="选择时间"
+            android:id="@+id/choose_time_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <Button
+            android:layout_marginLeft="@dimen/px_10"
+            android:text="一个对话框(sweetAlartDialog)"
+            android:id="@+id/Dialog_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</LinearLayout>
