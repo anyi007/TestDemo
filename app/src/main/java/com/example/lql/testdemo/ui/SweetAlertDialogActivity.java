@@ -214,7 +214,4 @@ public class SweetAlertDialogActivity extends AppCompatActivity implements View.
 
         }
     }
-
-
-
 }
