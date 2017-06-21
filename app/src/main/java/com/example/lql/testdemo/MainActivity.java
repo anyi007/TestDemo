@@ -6,9 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.lql.testdemo.ui.BigPicActivity;
 import com.example.lql.testdemo.ui.GildeActivity;
 import com.example.lql.testdemo.ui.HotwordsActivity;
 import com.example.lql.testdemo.ui.SeekbarActivity;
+import com.example.lql.testdemo.ui.ShimmerlayoutActivity;
 import com.example.lql.testdemo.ui.SweetAlertDialogActivity;
 import com.example.lql.testdemo.utils.chooseDateUtils.DateUtils;
 import com.example.lql.testdemo.utils.chooseDateUtils.OnoptionsUtils;
@@ -24,6 +26,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private android.widget.Button seekbar_button;
     private android.widget.Button choose_time_button;
     private android.widget.Button Dialog_button;
+    private android.widget.Button shimmerlayout_button;
+    private android.widget.Button bigpic_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,8 +57,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.Dialog_button = (Button) findViewById(R.id.Dialog_button);
         this.Dialog_button.setOnClickListener(this);
 
+        //加载过程中的布局闪光效果
+        this.shimmerlayout_button = (Button) findViewById(R.id.shimmerlayout_button);
+        this.shimmerlayout_button.setOnClickListener(this);
 
-
+        //加载过程中的布局闪光效果
+        this.bigpic_button = (Button) findViewById(R.id.bigpic_button);
+        this.bigpic_button.setOnClickListener(this);
 
     }
 
@@ -80,6 +89,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.Dialog_button:
                 startActivity(new Intent(MainActivity.this , SweetAlertDialogActivity.class));
+                break;
+            case R.id.shimmerlayout_button:
+                startActivity(new Intent(MainActivity.this , ShimmerlayoutActivity.class));
+                break;
+            case R.id.bigpic_button:
+                startActivity(new Intent(MainActivity.this , BigPicActivity.class));
                 break;
         }
     }

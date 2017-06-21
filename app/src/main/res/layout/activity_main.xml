@@ -59,4 +59,34 @@
             android:layout_height="wrap_content"/>
 
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/px_10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="加载过程中的布局闪光效果（shimmerlayout）"
+            android:id="@+id/shimmerlayout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+         android:layout_marginTop="@dimen/px_10"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:text="看大图"
+            android:id="@+id/bigpic_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
 </LinearLayout>

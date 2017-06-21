@@ -34,6 +34,18 @@
             android:name=".ui.SweetAlertDialogActivity"
             android:label="@string/title_activity_sweetalertdialog"  >
         </activity>
+        <activity
+            android:name=".ui.ShimmerlayoutActivity"
+            android:label="@string/title_activity_shimmerlayout"  >
+        </activity>
+        <activity
+            android:name=".ui.BigPicActivity"
+            android:label="@string/title_activity_shimmerlayout"  >
+        </activity>
+        <activity
+            android:name=".ui.PhotoDetailActivity"
+            android:label="@string/title_activity_photo_detail"  >
+        </activity>
     </application>
 
 </manifest>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:fresco="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="#fff"
+              android:orientation="horizontal"
+              android:paddingBottom="@dimen/px_20"
+              android:paddingLeft="@dimen/px_20"
+              android:paddingRight="@dimen/px_20"
+              android:paddingTop="@dimen/px_20">
+
+    <ImageView
+        android:id="@+id/item_collection_service_img"
+        android:layout_width="@dimen/px_150"
+        android:layout_height="@dimen/px_150"
+        android:src="@drawable/fuwu"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_150"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/px_10"
+        android:paddingRight="@dimen/px_10">
+
+
+        <TextView
+            android:id="@+id/item_collection_service_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:gravity="end"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/item_collection_service_price_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="#e50000"/>
+
+                <TextView
+                    android:id="@+id/item_collection_service_number_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:layout_weight="1"
+                    android:text="月销量0"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/px_20"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:layout_weight="1"
+                    android:textColor="#1AB394"
+                    android:visibility="invisible"/>
+
+
+                <TextView
+                    android:id="@+id/item_collection_service_cancel_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:background="@drawable/back_collection"
+                    android:paddingBottom="@dimen/px_10"
+                    android:paddingLeft="@dimen/px_20"
+                    android:paddingRight="@dimen/px_20"
+                    android:paddingTop="@dimen/px_10"
+                    android:text="取消收藏"
+                    android:textColor="#FF5C0F"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+
+

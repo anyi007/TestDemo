@@ -4,6 +4,9 @@
     <string name="title_activity_hotwords">热词+商品选择规格</string>
     <string name="title_activity_seekbar">改变一下seekbar的背景色</string>
     <string name="title_activity_sweetalertdialog">一个对话框（SweetAlertDialog）</string>
+    <string name="title_activity_shimmerlayout">加载过程中布局闪动效果(Shimmerlayout)</string>
+    <string name="title_activity_bigpic">查看大图</string>
+    <string name="title_activity_photo_detail">大图详情</string>
 
 
 
