@@ -4,89 +4,96 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.lql.testdemo.MainActivity">
 
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Button
-            android:text="Glide 4.x"
             android:id="@+id/glide_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="Glide 4.x"/>
 
 
         <Button
-            android:layout_marginLeft="10dp"
-            android:text="热词 商品规格选择"
             android:id="@+id/hotwords_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="热词 商品规格选择"/>
 
         <Button
-            android:layout_marginLeft="10dp"
-            android:text="修饰下seekbar"
             android:id="@+id/seekbar_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="修饰下seekbar"/>
 
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_marginTop="@dimen/px_10"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_10"
+        android:orientation="horizontal">
 
         <Button
-            android:text="选择时间"
             android:id="@+id/choose_time_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="选择时间"/>
 
 
         <Button
-            android:layout_marginLeft="@dimen/px_10"
-            android:text="一个对话框(sweetAlartDialog)"
             android:id="@+id/Dialog_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_10"
+            android:text="一个对话框(sweetAlartDialog)"/>
 
     </LinearLayout>
 
 
     <LinearLayout
-        android:layout_marginTop="@dimen/px_10"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_10"
+        android:orientation="horizontal">
 
         <Button
-            android:text="加载过程中的布局闪光效果（shimmerlayout）"
             android:id="@+id/shimmerlayout_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="加载过程中的布局闪光效果（shimmerlayout）"/>
 
     </LinearLayout>
 
 
     <LinearLayout
-         android:layout_marginTop="@dimen/px_10"
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_10"
+        android:orientation="horizontal">
 
         <Button
-            android:text="看大图"
             android:id="@+id/bigpic_button"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:text="看大图"/>
 
+
+        <Button
+            android:id="@+id/sideslip_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_10"
+            android:text="list侧滑"/>
     </LinearLayout>
 </LinearLayout>

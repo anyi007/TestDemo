@@ -47,7 +47,6 @@ public class ShimmerlayoutActivity extends AppCompatActivity {
         mMyCollectionServiceAdapter.setList(mListService);
         mRecyclerView.setAdapter(mMyCollectionServiceAdapter);
         getData();
-
     }
 
 

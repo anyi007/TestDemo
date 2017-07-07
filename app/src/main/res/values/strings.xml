@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TestDemo</string>
+    <string name="app_name">李小米的DEMO</string>
     <string name="title_activity_gilde">Gilde4.x使用</string>
     <string name="title_activity_hotwords">热词+商品选择规格</string>
     <string name="title_activity_seekbar">改变一下seekbar的背景色</string>
@@ -7,9 +7,7 @@
     <string name="title_activity_shimmerlayout">加载过程中布局闪动效果(Shimmerlayout)</string>
     <string name="title_activity_bigpic">查看大图</string>
     <string name="title_activity_photo_detail">大图详情</string>
-
-
-
+    <string name="title_activity_sideslip">list侧滑效果</string>
 
 
     <string name="pickerview_cancel">取消</string>
