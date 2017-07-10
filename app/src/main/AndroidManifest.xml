@@ -22,35 +22,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.GildeActivity"
+            android:name=".ui.activity.GildeActivity"
             android:label="@string/title_activity_gilde">
         </activity>
         <activity
-            android:name=".ui.HotwordsActivity"
+            android:name=".ui.activity.HotwordsActivity"
             android:label="@string/title_activity_hotwords">
         </activity>
         <activity
-            android:name=".ui.SeekbarActivity"
+            android:name=".ui.activity.SeekbarActivity"
             android:label="@string/title_activity_seekbar">
         </activity>
         <activity
-            android:name=".ui.SweetAlertDialogActivity"
+            android:name=".ui.activity.SweetAlertDialogActivity"
             android:label="@string/title_activity_sweetalertdialog">
         </activity>
         <activity
-            android:name=".ui.ShimmerlayoutActivity"
+            android:name=".ui.activity.ShimmerlayoutActivity"
             android:label="@string/title_activity_shimmerlayout">
         </activity>
         <activity
-            android:name=".ui.BigPicActivity"
+            android:name=".ui.activity.BigPicActivity"
             android:label="@string/title_activity_shimmerlayout">
         </activity>
         <activity
-            android:name=".ui.PhotoDetailActivity"
+            android:name=".ui.activity.PhotoDetailActivity"
             android:label="@string/title_activity_photo_detail">
         </activity>
         <activity
-            android:name=".ui.SideslipActivity"
+            android:name=".ui.activity.SideslipActivity"
             android:label="@string/title_activity_sideslip">
         </activity>
     </application>

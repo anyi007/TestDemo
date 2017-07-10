@@ -1,4 +1,4 @@
-package com.example.lql.testdemo.ui;
+package com.example.lql.testdemo.ui.activity;
 
 import android.graphics.Color;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.example.lql.testdemo.ui;
+package com.example.lql.testdemo.ui.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
