@@ -28,6 +28,11 @@ import java.util.ArrayList;
  * 作  者：李清林
  * 时  间：
  * 修改备注：
+ * 使用说明：1、更改状态栏颜色：这里需要一个theme，在theme中更改默认状态栏颜色，
+ * 在收缩的时候，需要在xml文件中设置CollapsingToolbarLayout的contentScrim的属性
+ * 2、需要设置图片沉浸
+ * 3、可以监听展开或者收缩的状态
+ * 4、这里提供一个更改FloatingActionButton颜色的方法
  */
 public class CoordinatorLayoutActivity extends AppCompatActivity {
 
@@ -45,7 +50,7 @@ public class CoordinatorLayoutActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coordinator_layout);
-//        MyStatusBarUtil.setStatusColor(this, getResources().getColor(R.color.colorPrimary));
+        MyStatusBarUtil.setStatusTransparent(CoordinatorLayoutActivity.this, false);//图片沉浸
         initView();
     }
 
@@ -58,7 +63,7 @@ public class CoordinatorLayoutActivity extends AppCompatActivity {
         this.mAppBarLayout = (AppBarLayout) findViewById(R.id.coordinator_appBar);
 
         mCollapsingToolbarLayout.setBackgroundColor(getResources().getColor(R.color.colorAccent));
-        MyStatusBarUtil.setStatusTransparent(CoordinatorLayoutActivity.this, false);//图片沉浸
+
         setSupportActionBar(coordinatortoolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -99,40 +104,22 @@ public class CoordinatorLayoutActivity extends AppCompatActivity {
         mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
             @Override
             public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-
-
 //                if (verticalOffset == 0) {
-//                    LogUtils.Loge("111111111");
 //                    //展开状态
 //                    if (state != CollapsingToolbarLayoutState.EXPANDED) {
 //                        state = CollapsingToolbarLayoutState.EXPANDED;//修改状态标记为展开
-//                        mCollapsingToolbarLayout.setTitle("展开状态");//设置title为EXPANDED
-//                        MyStatusBarUtil.setStatusTransparent(CoordinatorLayoutActivity.this, false);//图片沉浸
 //                    }
 //                } else if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
-//                    LogUtils.Loge("222222222");
 //                    //收缩状态
 //                    if (state != CollapsingToolbarLayoutState.COLLAPSED) {
 //                        state = CollapsingToolbarLayoutState.COLLAPSED;//修改状态标记为折叠
-//
-//                        mCollapsingToolbarLayout.setTitle("闭合状态");//设置title显示
-//                        //设置纯色沉浸
-//                        MyStatusBarUtil.setStatusColor(CoordinatorLayoutActivity.this, getResources().getColor(R.color.colorAccent));
 //                    }
 //                } else {
-//                    LogUtils.Loge("3333333333");
-//
 //                    if (state == CollapsingToolbarLayoutState.COLLAPSED) {
 //                        //收缩-----》中间---》展开
-//                        mCollapsingToolbarLayout.setTitle(" 打开打开");//设置title为EXPANDED
-//                        MyStatusBarUtil.setStatusTransparent(CoordinatorLayoutActivity.this, false);//图片沉浸
 //                    } else if (state == CollapsingToolbarLayoutState.EXPANDED) {
 //                        //展开---》中间   -----》收缩
-//                        mCollapsingToolbarLayout.setTitle("关闭关闭 ");//设置title显示
-//                        //设置纯色沉浸
-//                        MyStatusBarUtil.setStatusColor(CoordinatorLayoutActivity.this, getResources().getColor(R.color.colorAccent));
 //                    }
-//
 //                    state = CollapsingToolbarLayoutState.INTERNEDIATE;//修改状态标记为中间
 //                }
             }
