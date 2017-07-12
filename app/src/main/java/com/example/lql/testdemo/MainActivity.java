@@ -14,6 +14,7 @@ import com.example.lql.testdemo.ui.activity.SeekbarActivity;
 import com.example.lql.testdemo.ui.activity.ShimmerlayoutActivity;
 import com.example.lql.testdemo.ui.activity.SideslipActivity;
 import com.example.lql.testdemo.ui.activity.SweetAlertDialogActivity;
+import com.example.lql.testdemo.ui.activity.VideoListActivity;
 import com.example.lql.testdemo.utils.chooseDateUtils.DateUtils;
 import com.example.lql.testdemo.utils.chooseDateUtils.OnoptionsUtils;
 import com.example.lql.testdemo.utils.pickerview.TimePopupWindow;
@@ -34,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private android.widget.Button bigpicButton;
     private android.widget.Button SideslipButton;
     private android.widget.Button CoordinatorLayoutButton;
+    private android.widget.Button VideolistButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,6 +81,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.CoordinatorLayoutButton = (Button) findViewById(R.id.CoordinatorLayout_button);
         this.CoordinatorLayoutButton.setOnClickListener(this);
 
+        //一个视频播放列表
+        this.VideolistButton = (Button) findViewById(R.id.videolist_button);
+        this.VideolistButton.setOnClickListener(this);
+
     }
 
     @Override
@@ -115,6 +121,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.CoordinatorLayout_button:
                 startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
+                break;
+            case R.id.videolist_button:
+                startActivity(new Intent(MainActivity.this, VideoListActivity.class));
                 break;
 
         }

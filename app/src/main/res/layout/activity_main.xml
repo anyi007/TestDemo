@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="@dimen/px_10"
     tools:context="com.example.lql.testdemo.MainActivity">
 
 
@@ -103,4 +104,21 @@
             android:layout_marginLeft="@dimen/px_10"
             android:text="CoordinatorLayout"/>
     </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_10"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/videolist_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="视频播放列表"/>
+
+
+    </LinearLayout>
+
 </LinearLayout>

@@ -12,6 +12,7 @@
     <string name="title_activity_photo_detail">大图详情</string>
     <string name="title_activity_sideslip">list侧滑效果</string>
     <string name="title_activity_CoordinatorLayout">CoordinatorLayout使用</string>
+    <string name="title_activity_VideoList">视频播放列表</string>
 
 
     <string name="pickerview_cancel">取消</string>
