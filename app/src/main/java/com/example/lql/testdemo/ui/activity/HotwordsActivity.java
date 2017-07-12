@@ -11,7 +11,12 @@ import com.example.lql.testdemo.utils.hotWords.TagViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * 类描述：热词+商品规格选择
+ * 作  者：李清林
+ * 时  间：
+ * 修改备注：
+ */
 public class HotwordsActivity extends AppCompatActivity {
 
     TagViewGroup hot_keyword ;

@@ -12,9 +12,11 @@ import com.example.lql.testdemo.R;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
 /**
- * Created by Admin on 2017/6/20.
+ * 类描述：对话框
+ * 作  者：李清林
+ * 时  间：
+ * 修改备注：
  */
-
 public class SweetAlertDialogActivity extends AppCompatActivity implements View.OnClickListener {
 
 

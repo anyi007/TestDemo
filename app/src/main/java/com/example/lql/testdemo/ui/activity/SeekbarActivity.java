@@ -7,9 +7,11 @@ import android.support.v7.app.AppCompatActivity;
 import com.example.lql.testdemo.R;
 
 /**
- * Created by Admin on 2017/6/20.
+ * 类描述：一个自定义样式的seekbar
+ * 作  者：李清林
+ * 时  间：
+ * 修改备注：
  */
-
 public class SeekbarActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

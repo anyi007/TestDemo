@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/tools"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_test"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    </android.support.v7.widget.Toolbar>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -13,7 +24,7 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:scaleType="fitXY"
-            android:src="@drawable/loading" />
+            android:src="@drawable/loading"/>
 
         <TextView
             android:id="@+id/tv_user"
@@ -23,7 +34,7 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@id/iv_headView"
             android:text="大猪"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
 
         <TextView
             android:id="@+id/tv_content"
@@ -33,17 +44,17 @@
             android:layout_alignLeft="@+id/tv_user"
             android:layout_toRightOf="@id/iv_headView"
             android:text="00:00"
-            android:textSize="18sp" />
+            android:textSize="18sp"/>
 
         <GridView
             android:id="@+id/gv_pics"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/iv_headView"
-            android:numColumns="3"
+            android:layout_marginTop="5dp"
             android:horizontalSpacing="1dp"
-            android:verticalSpacing="2dp"
-            android:layout_marginTop="5dp" />
+            android:numColumns="3"
+            android:verticalSpacing="2dp"/>
 
     </RelativeLayout>
 </LinearLayout>

@@ -19,12 +19,15 @@ import uk.co.senab.photoview.PhotoView;
 import uk.co.senab.photoview.PhotoViewAttacher;
 
 /**
- * Created by Admin on 2017/6/21.
+ * 类描述：看大图页面
+ * 作  者：李清林
+ * 时  间：
+ * 修改备注：
  */
-
 public class PhotoDetailActivity extends AppCompatActivity {
     private ArrayList<String> list_pics;
     OverScrollViewPager pager_detail;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +38,7 @@ public class PhotoDetailActivity extends AppCompatActivity {
 
 
         list_pics = getIntent().getExtras().getStringArrayList("photos");
-        if (list_pics == null){
+        if (list_pics == null) {
             finish();
         }
         int position = getIntent().getIntExtra("position", 0);
@@ -89,7 +92,7 @@ public class PhotoDetailActivity extends AppCompatActivity {
                 }
             });
 
-            GlidePicUtils.LoadImg(PhotoDetailActivity.this , photo_detail , list_pics.get(position));
+            GlidePicUtils.LoadImg(PhotoDetailActivity.this, photo_detail, list_pics.get(position));
             container.addView(view);
             return view;
 

@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.example.lql.testdemo.R;
-import com.example.lql.testdemo.adapter.RecyclerviewAdapter;
+import com.example.lql.testdemo.adapter.PicRecyclerviewAdapter;
 import com.example.lql.testdemo.utils.gildeUtils.GlidePicUtils;
 
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class GildeActivity extends AppCompatActivity implements View.OnClickList
 
     ArrayList<String> ImageUrl=new ArrayList<>();
 
-    RecyclerviewAdapter mRecyclerviewAdapter;
+    PicRecyclerviewAdapter mRecyclerviewAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,7 +55,7 @@ public class GildeActivity extends AppCompatActivity implements View.OnClickList
         this.button1.setOnClickListener(this);
 
         recycler.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerviewAdapter = new RecyclerviewAdapter(this);
+        mRecyclerviewAdapter = new PicRecyclerviewAdapter(this);
         mRecyclerviewAdapter.setList(ImageUrl);
         recycler.setAdapter(mRecyclerviewAdapter);
     }

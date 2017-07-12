@@ -21,7 +21,10 @@ import io.supercharge.shimmerlayout.ShimmerLayout;
 
 
 /**
- * Created by Admin on 2017/6/21.
+ * 类描述：加载过程中的布局闪光效果
+ * 作  者：李清林
+ * 时  间：
+ * 修改备注：
  */
 
 public class ShimmerlayoutActivity extends AppCompatActivity {

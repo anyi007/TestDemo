@@ -95,5 +95,12 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/px_10"
             android:text="list侧滑"/>
+
+        <Button
+            android:id="@+id/CoordinatorLayout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_10"
+            android:text="CoordinatorLayout"/>
     </LinearLayout>
 </LinearLayout>

@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.lql.testdemo.ui.activity.BigPicActivity;
+import com.example.lql.testdemo.ui.activity.CoordinatorLayoutActivity;
 import com.example.lql.testdemo.ui.activity.GildeActivity;
 import com.example.lql.testdemo.ui.activity.HotwordsActivity;
 import com.example.lql.testdemo.ui.activity.SeekbarActivity;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private android.widget.Button shimmerlayoutButton;
     private android.widget.Button bigpicButton;
     private android.widget.Button SideslipButton;
+    private android.widget.Button CoordinatorLayoutButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,13 +67,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.shimmerlayoutButton = (Button) findViewById(R.id.shimmerlayout_button);
         this.shimmerlayoutButton.setOnClickListener(this);
 
-        //加载过程中的布局闪光效果
+        //查看大图
         this.bigpicButton = (Button) findViewById(R.id.bigpic_button);
         this.bigpicButton.setOnClickListener(this);
 
         //list侧滑
         this.SideslipButton = (Button) findViewById(R.id.sideslip_button);
         this.SideslipButton.setOnClickListener(this);
+
+        //CoordinatorLayout
+        this.CoordinatorLayoutButton = (Button) findViewById(R.id.CoordinatorLayout_button);
+        this.CoordinatorLayoutButton.setOnClickListener(this);
 
     }
 
@@ -107,6 +113,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.sideslip_button:
                 startActivity(new Intent(MainActivity.this, SideslipActivity.class));
                 break;
+            case R.id.CoordinatorLayout_button:
+                startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
+                break;
+
         }
     }
 }
