@@ -124,7 +124,5 @@ public class CoordinatorLayoutActivity extends AppCompatActivity {
 //                }
             }
         });
-
-
     }
 }
