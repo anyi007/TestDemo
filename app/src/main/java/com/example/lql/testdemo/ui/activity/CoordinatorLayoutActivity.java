@@ -81,6 +81,7 @@ public class CoordinatorLayoutActivity extends AppCompatActivity {
 //        mCollapsingToolbarLayout.setExpandedTitleTextColor();
 //        mCollapsingToolbarLayout.setCollapsedTitleTextColor();
 
+
         coordinatorrecycler.setLayoutManager(new LinearLayoutManager(this));
         coordinatorrecycler.addItemDecoration(new DividerListItemDecoration(this, MyDecoration.HORIZONTAL_LIST));
         mTestTextViewAdapter = new TestTextViewAdapter(CoordinatorLayoutActivity.this);
