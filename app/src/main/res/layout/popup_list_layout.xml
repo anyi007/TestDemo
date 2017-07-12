@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/color_fff"
+              android:orientation="vertical">
+
+    <include layout="@layout/include_line"></include>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/px_10"
+        android:paddingTop="@dimen/px_10"
+        android:text="请选择"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/px_35"/>
+
+    <include layout="@layout/include_line"></include>
+
+    <ListView
+        android:id="@+id/popup_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/cancel_popup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="@dimen/px_20"
+        android:paddingTop="@dimen/px_20"
+        android:text="取消"
+        android:textSize="@dimen/px_35"/>
+
+
+</LinearLayout>

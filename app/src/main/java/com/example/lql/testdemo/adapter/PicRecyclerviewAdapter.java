@@ -21,11 +21,11 @@ import java.util.ArrayList;
  * 时  间：
  * 修改备注：
  */
-public class RecyclerviewAdapter extends  RecyclerView.Adapter<RecyclerviewAdapter.ViewHolder>{
+public class PicRecyclerviewAdapter extends  RecyclerView.Adapter<PicRecyclerviewAdapter.ViewHolder>{
 
     private Context mContext;
 
-    public RecyclerviewAdapter(Context mContext) {
+    public PicRecyclerviewAdapter(Context mContext) {
         this.mContext = mContext;
     }
 

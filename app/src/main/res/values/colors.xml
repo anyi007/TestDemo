@@ -6,4 +6,6 @@
 
     <color name="wheel_timebtn_nor">#4396f7</color>
     <color name="wheel_timebtn_pre">#CCCCCC</color>
+    <color name="color_fff">#fff</color>
+    <color name="window_background">#FFF5F5F5</color>
 </resources>

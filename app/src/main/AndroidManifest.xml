@@ -43,15 +43,25 @@
         </activity>
         <activity
             android:name=".ui.activity.BigPicActivity"
-            android:label="@string/title_activity_shimmerlayout">
+            android:label="@string/title_activity_bigpic"
+            android:theme="@style/AppTheme.NoActionBar1">
         </activity>
+
         <activity
             android:name=".ui.activity.PhotoDetailActivity"
-            android:label="@string/title_activity_photo_detail">
+            android:label="@string/title_activity_photo_detail"
+            android:theme="@style/AppTheme.NoActionBar1">
+
         </activity>
+
         <activity
             android:name=".ui.activity.SideslipActivity"
             android:label="@string/title_activity_sideslip">
+        </activity>
+        <activity
+            android:name=".ui.activity.CoordinatorLayoutActivity"
+            android:label="@string/title_activity_CoordinatorLayout"
+            android:theme="@style/coordinator_emma_immerse">
         </activity>
     </application>
 

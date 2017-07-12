@@ -10,8 +10,9 @@ package com.example.lql.testdemo.http;
 
 public class MyUrl {
     //我的收藏
-    public static String UserFavoriteList="https://www.51cnkicheck.com/usercenter/UserFavoriteList";
-
+    public static String UserFavoriteList = "https://www.51cnkicheck.com/usercenter/UserFavoriteList";
+    //下载地址
+    public static String DownLoad = "";
 
 
 }

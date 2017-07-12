@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -18,10 +18,68 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
 
-
     <!-- ActionSheet进出动画 -->
     <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
         <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in</item>
         <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out</item>
     </style>
+
+
+    <!-- App主题没有ActionBar的 -->
+    <style name="AppTheme.NoActionBar1" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+        <!--设置右边的菜单按钮成白色-->
+        <item name="colorControlNormal">@color/color_fff</item>
+    </style>
+
+
+    <!--下拉菜单样式-->
+    <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <!--兼容Api 21之前的版本 (Spinner也有该属性)-->
+        <item name="overlapAnchor">false</item>
+        <!-- Api 21 以上专用-->
+        <!--<item name="android:overlapAnchor">false</item>-->
+
+        <!--.. 另外还有这么几个属性-->
+        <item name="android:dropDownHorizontalOffset">0dp</item>
+        <!-- 溢出菜单离toolbar的距离-->
+        <item name="android:dropDownVerticalOffset">0dp</item>
+        <!-- 溢出菜单的背景色-->
+    </style>
+
+
+
+    <!--emma的沉浸式界面主题针对5.0以上-->
+    <style name="coordinator_emma_immerse" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <!--自己改一下状态栏的颜色-->
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/window_background</item>
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap" tools:targetApi="lollipop">true
+        </item>
+        <item name="android:windowAllowReturnTransitionOverlap" tools:targetApi="lollipop">true
+        </item>
+        <item name="android:windowSharedElementEnterTransition" tools:targetApi="lollipop">
+            @android:transition/move
+        </item>
+        <item name="android:windowSharedElementExitTransition" tools:targetApi="lollipop">
+            @android:transition/move
+        </item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@android:color/transparent
+        </item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+    </style>
+
+
+
+
+
 </resources>
