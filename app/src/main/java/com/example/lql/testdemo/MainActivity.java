@@ -10,6 +10,7 @@ import com.example.lql.testdemo.ui.activity.BigPicActivity;
 import com.example.lql.testdemo.ui.activity.CoordinatorLayoutActivity;
 import com.example.lql.testdemo.ui.activity.GildeActivity;
 import com.example.lql.testdemo.ui.activity.HotwordsActivity;
+import com.example.lql.testdemo.ui.activity.RecyclerviewCardGalleryActivity;
 import com.example.lql.testdemo.ui.activity.SeekbarActivity;
 import com.example.lql.testdemo.ui.activity.ShimmerlayoutActivity;
 import com.example.lql.testdemo.ui.activity.SideslipActivity;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private android.widget.Button SideslipButton;
     private android.widget.Button CoordinatorLayoutButton;
     private android.widget.Button VideolistButton;
+    private android.widget.Button RecyclerviewCardGalleryButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +87,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.VideolistButton = (Button) findViewById(R.id.videolist_button);
         this.VideolistButton.setOnClickListener(this);
 
+        //Recyclerview实现一个画廊效果
+        this.RecyclerviewCardGalleryButton = (Button) findViewById(R.id.recyclerviewCardGallery_button);
+        this.RecyclerviewCardGalleryButton.setOnClickListener(this);
+
     }
 
     @Override
@@ -93,12 +99,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.glide_button:
                 startActivity(new Intent(MainActivity.this, GildeActivity.class));
                 break;
+
             case R.id.hotwords_button:
                 startActivity(new Intent(MainActivity.this, HotwordsActivity.class));
                 break;
+
             case R.id.seekbar_button:
                 startActivity(new Intent(MainActivity.this, SeekbarActivity.class));
                 break;
+
             case choose_time_button:
                 OnoptionsUtils.showDateSelect(MainActivity.this, choose_time_Button, new TimePopupWindow.OnTimeSelectListener() {
                     @Override
@@ -107,23 +116,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                 });
                 break;
+
             case R.id.Dialog_button:
                 startActivity(new Intent(MainActivity.this, SweetAlertDialogActivity.class));
                 break;
+
             case R.id.shimmerlayout_button:
                 startActivity(new Intent(MainActivity.this, ShimmerlayoutActivity.class));
                 break;
+
             case R.id.bigpic_button:
                 startActivity(new Intent(MainActivity.this, BigPicActivity.class));
                 break;
+
             case R.id.sideslip_button:
                 startActivity(new Intent(MainActivity.this, SideslipActivity.class));
                 break;
+
             case R.id.CoordinatorLayout_button:
                 startActivity(new Intent(MainActivity.this, CoordinatorLayoutActivity.class));
                 break;
+
             case R.id.videolist_button:
                 startActivity(new Intent(MainActivity.this, VideoListActivity.class));
+                break;
+
+            case R.id.recyclerviewCardGallery_button:
+                startActivity(new Intent(MainActivity.this, RecyclerviewCardGalleryActivity.class));
                 break;
 
         }

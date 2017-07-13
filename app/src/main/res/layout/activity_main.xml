@@ -118,7 +118,12 @@
             android:layout_height="wrap_content"
             android:text="视频播放列表"/>
 
-
+        <Button
+            android:id="@+id/recyclerviewCardGallery_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_10"
+            android:text="recyclerview画廊效果"/>
     </LinearLayout>
 
 </LinearLayout>

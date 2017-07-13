@@ -70,7 +70,6 @@ public class GlidePicUtils {
 
             //在RequestOptions中使用Transformations
             requestOptions.transform(new CircleTransform(mContext));
-
             //RequestBuilder<Bitmap> 中添加RequestOptions
             bitmapRequestBuilder.apply(requestOptions).into(imageView);
         }else{
@@ -112,6 +111,7 @@ public class GlidePicUtils {
 
 
 
+
     /**
      * 加载资源文件
      * @param mContext
@@ -123,6 +123,10 @@ public class GlidePicUtils {
                 load(requestId);
         drawableRequestBuilder.into(imageView);
     }
+
+
+
+
 
 
 

@@ -40,10 +40,10 @@ dependencies {
     compile 'com.google.code.gson:gson:2.8.1'
     //小白点指示器
     compile 'com.romandanylyk:pageindicatorview:0.0.9'
-
     // 图片选择器
     compile 'cn.bingoogolapple:bga-adapter:1.1.0@aar'
     compile 'cn.bingoogolapple:bga-photopicker:1.1.3@aar'
     //侧滑菜单
     compile 'com.baoyz.swipemenulistview:library:1.3.0'
+    compile project(':RecyclerviewCardGalleryLibrary')
 }
