@@ -126,4 +126,26 @@
             android:text="recyclerview画廊效果"/>
     </LinearLayout>
 
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_10"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/floatingaction_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="好看的floatingactionbutton"/>
+
+        <Button
+            android:id="@+id/timing_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/px_10"
+            android:text="闹钟定时任务"/>
+
+
+    </LinearLayout>
 </LinearLayout>

@@ -14,6 +14,7 @@
     <string name="title_activity_CoordinatorLayout">CoordinatorLayout使用</string>
     <string name="title_activity_VideoList">视频播放列表</string>
     <string name="title_activity_RecyclerviewCardGallery">Recyclerview画廊效果</string>
+    <string name="title_activity_FloatingactionButtonActivity">动画效果的FloatingactionButton</string>
 
 
     <string name="pickerview_cancel">取消</string>

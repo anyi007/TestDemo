@@ -7,5 +7,8 @@
     <color name="wheel_timebtn_nor">#4396f7</color>
     <color name="wheel_timebtn_pre">#CCCCCC</color>
     <color name="color_fff">#fff</color>
+    <color name="color_f1f1f1">#f1f1f1</color>
+    <color name="color_808080">#808080</color>
     <color name="window_background">#FFF5F5F5</color>
+    <color name="black_semi_transparent">#B2000000</color>
 </resources>

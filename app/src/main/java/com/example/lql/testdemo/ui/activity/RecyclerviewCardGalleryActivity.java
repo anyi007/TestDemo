@@ -44,7 +44,6 @@ public class RecyclerviewCardGalleryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recyclerview_cardgallery);
         initview();
-
     }
 
     private void initview() {
@@ -59,23 +58,24 @@ public class RecyclerviewCardGalleryActivity extends AppCompatActivity {
         });
 
 
-        mList.add("http://pic46.nipic.com/20140819/7487939_224845528000_2.jpg");
-        mList.add("http://cdn.duitang.com/uploads/item/201504/18/20150418H2112_LXniu.thumb.700_0.jpeg");
-        mList.add("http://pic27.photophoto.cn/20130525/0005018338588465_b.jpg");
-        mList.add("http://h.hiphotos.baidu.com/zhidao/pic/item/80cb39dbb6fd52660fa9fe7cad18972bd50736dc.jpg");
-        mList.add("http://p2.gexing.com/qqpifu/20121001/1552/50694ba0e25a3.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205553.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205544.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205538.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205534.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205530.jpg");
 
-        mList.add("http://pic46.nipic.com/20140819/7487939_224845528000_2.jpg");
-        mList.add("http://cdn.duitang.com/uploads/item/201504/18/20150418H2112_LXniu.thumb.700_0.jpeg");
-        mList.add("http://pic27.photophoto.cn/20130525/0005018338588465_b.jpg");
-        mList.add("http://h.hiphotos.baidu.com/zhidao/pic/item/80cb39dbb6fd52660fa9fe7cad18972bd50736dc.jpg");
-        mList.add("http://p2.gexing.com/qqpifu/20121001/1552/50694ba0e25a3.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205524.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205520.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205514.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205507.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205500.jpg");
 
-        mList.add("http://pic46.nipic.com/20140819/7487939_224845528000_2.jpg");
-        mList.add("http://cdn.duitang.com/uploads/item/201504/18/20150418H2112_LXniu.thumb.700_0.jpeg");
-        mList.add("http://pic27.photophoto.cn/20130525/0005018338588465_b.jpg");
-        mList.add("http://h.hiphotos.baidu.com/zhidao/pic/item/80cb39dbb6fd52660fa9fe7cad18972bd50736dc.jpg");
-        mList.add("http://p2.gexing.com/qqpifu/20121001/1552/50694ba0e25a3.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205457.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205450.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205454.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205558.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205604.jpg");
+        mList.add("http://img.tupianzj.com/uploads/allimg/160604/16-160604205F6.jpg");
 
         mCardAdapter = new CardAdapter(RecyclerviewCardGalleryActivity.this);
         mCardAdapter.setList(mList);

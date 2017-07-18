@@ -22,12 +22,7 @@ import jameson.io.library.util.ToastUtils;
  * Created by jameson on 8/30/16.
  */
 public class CardAdapter extends RecyclerView.Adapter<CardAdapter.ViewHolder> {
-//    private List<Integer> mList = new ArrayList<>();
-//    private CardAdapterHelper mCardAdapterHelper = new CardAdapterHelper();
-//
-//    public CardAdapter(List<Integer> mList) {
-//        this.mList = mList;
-//    }
+
 
     private CardAdapterHelper mCardAdapterHelper = new CardAdapterHelper();
 

@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.example.lql.testdemo.ui.activity.BigPicActivity;
 import com.example.lql.testdemo.ui.activity.CoordinatorLayoutActivity;
+import com.example.lql.testdemo.ui.activity.FloatingactionButtonActivity;
 import com.example.lql.testdemo.ui.activity.GildeActivity;
 import com.example.lql.testdemo.ui.activity.HotwordsActivity;
 import com.example.lql.testdemo.ui.activity.RecyclerviewCardGalleryActivity;
@@ -38,6 +39,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private android.widget.Button CoordinatorLayoutButton;
     private android.widget.Button VideolistButton;
     private android.widget.Button RecyclerviewCardGalleryButton;
+    private android.widget.Button FloatingactionButton;
+    private android.widget.Button TimingButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +94,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.RecyclerviewCardGalleryButton = (Button) findViewById(R.id.recyclerviewCardGallery_button);
         this.RecyclerviewCardGalleryButton.setOnClickListener(this);
 
+        //一个好看的FloatingactionButton，能弹出来几个按钮
+        this.FloatingactionButton = (Button) findViewById(R.id.floatingaction_button);
+        this.FloatingactionButton.setOnClickListener(this);
+
+        //闹钟实现定时任务
+        this.TimingButton = (Button) findViewById(R.id.timing_button);
+        this.TimingButton.setOnClickListener(this);
+
     }
 
     @Override
@@ -143,6 +154,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.recyclerviewCardGallery_button:
                 startActivity(new Intent(MainActivity.this, RecyclerviewCardGalleryActivity.class));
+                break;
+
+            case R.id.floatingaction_button:
+                startActivity(new Intent(MainActivity.this, FloatingactionButtonActivity.class));
+                break;
+
+            case R.id.timing_button:
+                startActivity(new Intent(MainActivity.this, FloatingactionButtonActivity.class));
                 break;
 
         }

@@ -79,6 +79,11 @@
             android:label="@string/title_activity_RecyclerviewCardGallery"
             >
         </activity>
+        <activity
+            android:name=".ui.activity.FloatingactionButtonActivity"
+            android:label="@string/title_activity_RecyclerviewCardGallery"
+            >
+        </activity>
     </application>
 
 </manifest>
