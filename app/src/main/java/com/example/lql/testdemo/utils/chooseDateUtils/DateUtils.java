@@ -72,7 +72,7 @@ public class DateUtils {
      * @return
      */
     public static String format(Date date) {
-        return format(date, "yyyy-MM-dd HH:mm");
+        return format(date, "yyyy-MM-dd HH");
     }
 
     /**
@@ -320,6 +320,37 @@ public class DateUtils {
         return month + "月" + day + "日" + "(" + weekStr + ")";
     }
 
+
+    public static int getMonthDayWeekNmuber() {
+        Calendar c = Calendar.getInstance();
+        int week = c.get(Calendar.DAY_OF_WEEK);
+        int weekNumber = 1;
+        switch (week) {
+            case Calendar.MONDAY:
+                weekNumber = 1;
+                break;
+            case Calendar.TUESDAY:
+                weekNumber = 2;
+                break;
+            case Calendar.WEDNESDAY:
+                weekNumber = 3;
+                break;
+            case Calendar.THURSDAY:
+                weekNumber = 4;
+                break;
+            case Calendar.FRIDAY:
+                weekNumber = 5;
+                break;
+            case Calendar.SATURDAY:
+                weekNumber = 6;
+                break;
+            case Calendar.SUNDAY:
+                weekNumber = 7;
+                break;
+        }
+        return weekNumber;
+    }
+
     /**
      * 日期字符串转换为日期
      *
@@ -449,5 +480,19 @@ public class DateUtils {
     public static String getTimeInterval(Date d) {
         String date = format(d, "yyyy-MM-dd HH:mm:ss");
         return getTimeInterval(date);
+    }
+
+    static String StrTime;
+
+    public static String LongToStr(Long time) {
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd ");
+
+        try {
+            StrTime = format.format(time);
+            date = format.parse(StrTime);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return StrTime;
     }
 }

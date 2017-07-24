@@ -9,6 +9,13 @@
     <color name="color_fff">#fff</color>
     <color name="color_f1f1f1">#f1f1f1</color>
     <color name="color_808080">#808080</color>
+    <color name="color_333">#333</color>
+    <color name="color_666">#666</color>
+    <color name="color_999">#999</color>
+    <color name="color_FF0000">#FF0000</color>
+    <color name="color_FF4040">#FF4040</color>
+    <color name="color_51D8BA">#51D8BA</color>
     <color name="window_background">#FFF5F5F5</color>
     <color name="black_semi_transparent">#B2000000</color>
+
 </resources>

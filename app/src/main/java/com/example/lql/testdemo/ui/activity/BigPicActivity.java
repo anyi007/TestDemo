@@ -44,8 +44,8 @@ public class BigPicActivity extends AppCompatActivity {
 
 //        mToolbar.setSubtitle("subtitle");//子标题
 //        mToolbar.setSubtitleTextColor(getResources().getColor(R.color.wheel_timebtn_pre));//子标题颜色文字
-        mToolbar.setTitleMargin(30, 0, 0, 0);//标题边缘距离
-
+//        mToolbar.setTitleMargin(30, 0, 0, 0);//标题边缘距离
+//
 //        mToolbar.setLogo(R.drawable.nba_logo);//logo
 //        mToolbar.setLogoDescription("asd");
 

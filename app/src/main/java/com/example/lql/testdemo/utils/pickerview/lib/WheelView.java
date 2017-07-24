@@ -52,22 +52,22 @@ import java.util.List;
  */
 public class WheelView extends View {
     /**
-     * Scrolling duration
+     * Scrolling duration  滚动时间
      */
     private static final int SCROLLING_DURATION = 400;
 
     /**
-     * Minimum delta for scrolling
+     * Minimum delta for scrolling  最小滚动数量
      */
     private static final int MIN_DELTA_FOR_SCROLLING = 1;
 
     /**
-     * Current value & label text color
+     * Current value & label text color  选中值的值得颜色
      */
-    private static final int VALUE_TEXT_COLOR = 0xFF666666;
+    private static int VALUE_TEXT_COLOR = 0xFFFF0000;
 
     /**
-     * Items text color
+     * Items text color  非选中值得颜色
      */
     private static final int ITEMS_TEXT_COLOR = 0xFF666666;
 
@@ -169,6 +169,11 @@ public class WheelView extends View {
     public WheelView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         initData(context);
+    }
+
+
+    public void setItemsTextColor(int Color) {
+        VALUE_TEXT_COLOR = Color;
     }
 
     /**
@@ -435,6 +440,7 @@ public class WheelView extends View {
             itemsPaint.setColor(0xFF666666);
         }
 
+
         if (valuePaint == null) {
 //			valuePaint = new TextPaint(Paint.ANTI_ALIAS_FLAG
 //					| Paint.FAKE_BOLD_TEXT_FLAG | Paint.DITHER_FLAG);
@@ -443,6 +449,7 @@ public class WheelView extends View {
             valuePaint.setTextSize(TEXT_SIZE);
 //			valuePaint.setShadowLayer(0.1f, 0, 0.1f, 0xFFC0C0C0);
         }
+
 
         if (centerDrawable == null) {
             centerDrawable = getContext().getResources().getDrawable(

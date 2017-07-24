@@ -37,6 +37,15 @@
     </style>
 
 
+    <!-- App主题没有ActionBar的 -->
+    <style name="AppTheme.TimingChooseDayActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+    </style>
+
     <!--下拉菜单样式-->
     <style name="OverflowMenu" parent="Widget.AppCompat.PopupMenu.Overflow">
         <!--兼容Api 21之前的版本 (Spinner也有该属性)-->

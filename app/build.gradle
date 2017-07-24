@@ -1,5 +1,5 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'org.greenrobot.greendao'
 android {
     compileSdkVersion 25
     buildToolsVersion "25.0.3"
@@ -19,6 +19,20 @@ android {
     }
 }
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'org.greenrobot:greendao-gradle-plugin:3.0.0'
+    }
+}
+
+greendao {
+    schemaVersion 1   //数据库版本号
+    daoPackage 'com.example.lql.testdemo.db.gen'//Greendao  生成工具类的位置
+    targetGenDir 'src/main/java'
+}
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -48,4 +62,7 @@ dependencies {
     compile project(':RecyclerviewCardGalleryLibrary')
 //    一个好看的FloatingactionButton
     compile 'com.getbase:floatingactionbutton:1.10.1'
+    //数据库
+    compile 'org.greenrobot:greendao:3.0.1'
+    compile 'org.greenrobot:greendao-generator:3.0.0'
 }

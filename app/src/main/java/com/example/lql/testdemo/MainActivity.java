@@ -16,6 +16,7 @@ import com.example.lql.testdemo.ui.activity.SeekbarActivity;
 import com.example.lql.testdemo.ui.activity.ShimmerlayoutActivity;
 import com.example.lql.testdemo.ui.activity.SideslipActivity;
 import com.example.lql.testdemo.ui.activity.SweetAlertDialogActivity;
+import com.example.lql.testdemo.ui.activity.TimingListActivity;
 import com.example.lql.testdemo.ui.activity.VideoListActivity;
 import com.example.lql.testdemo.utils.chooseDateUtils.DateUtils;
 import com.example.lql.testdemo.utils.chooseDateUtils.OnoptionsUtils;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+
     }
 
     private void initView() {
@@ -161,7 +163,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.timing_button:
-                startActivity(new Intent(MainActivity.this, FloatingactionButtonActivity.class));
+                startActivity(new Intent(MainActivity.this, TimingListActivity.class));
                 break;
 
         }

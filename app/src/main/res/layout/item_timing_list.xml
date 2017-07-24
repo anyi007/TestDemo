@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/add_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_90"
+        android:layout_marginLeft="@dimen/px_20"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/px_10"
+        android:paddingTop="@dimen/px_10"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="添加闹钟"
+            android:textColor="@color/bga_pp_activity_bg"
+            android:textSize="@dimen/px_30"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/timing_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/px_10"
+        android:paddingLeft="@dimen/px_20"
+        android:paddingRight="@dimen/px_20"
+        android:paddingTop="@dimen/px_10">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="06:30"
+                android:textSize="@dimen/px_60"/>
+
+
+            <TextView
+                android:id="@+id/item_repeat_time"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/px_10"
+                android:text="每周日"
+                android:textSize="@dimen/px_30"/>
+        </LinearLayout>
+
+
+        <Switch
+            android:id="@+id/item_open"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:backgroundTint="@color/bga_pp_activity_bg"
+            android:backgroundTintMode="src_atop"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

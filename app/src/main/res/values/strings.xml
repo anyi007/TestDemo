@@ -15,6 +15,10 @@
     <string name="title_activity_VideoList">视频播放列表</string>
     <string name="title_activity_RecyclerviewCardGallery">Recyclerview画廊效果</string>
     <string name="title_activity_FloatingactionButtonActivity">动画效果的FloatingactionButton</string>
+    <string name="title_activity_TimingActivity">定时任务（闹钟）</string>
+    <string name="title_activity_TimingListActivity">闹钟列表</string>
+    <string name="title_activity_TimingChooseDayActivity">选择时间周期</string>
+    <string name="title_activity_ClockAlarmActivity">闹钟时间到了，这里响应</string>
 
 
     <string name="pickerview_cancel">取消</string>
