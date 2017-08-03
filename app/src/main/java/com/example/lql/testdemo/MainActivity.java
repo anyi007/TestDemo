@@ -3,10 +3,13 @@ package com.example.lql.testdemo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.lql.testdemo.ui.activity.BigPicActivity;
+import com.example.lql.testdemo.ui.activity.BilibiliActivity;
 import com.example.lql.testdemo.ui.activity.CoordinatorLayoutActivity;
 import com.example.lql.testdemo.ui.activity.FloatingactionButtonActivity;
 import com.example.lql.testdemo.ui.activity.GildeActivity;
@@ -42,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private android.widget.Button RecyclerviewCardGalleryButton;
     private android.widget.Button FloatingactionButton;
     private android.widget.Button TimingButton;
+    private android.widget.Button BilibiliButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +107,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //闹钟实现定时任务
         this.TimingButton = (Button) findViewById(R.id.timing_button);
         this.TimingButton.setOnClickListener(this);
+
+        //bilibili排行页面
+        this.BilibiliButton = (Button) findViewById(R.id.bilibili_button);
+        this.BilibiliButton.setOnClickListener(this);
 
     }
 
@@ -166,6 +174,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this, TimingListActivity.class));
                 break;
 
+            case R.id.bilibili_button:
+                startActivity(new Intent(MainActivity.this, BilibiliActivity.class));
+                break;
+
         }
+    }
+
+
+    private long exitTime = 0;
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_DOWN) {
+            if ((System.currentTimeMillis() - exitTime) > 2000) {
+                Toast.makeText(getApplicationContext(), "再按一次退出程序", Toast.LENGTH_SHORT).show();
+                exitTime = System.currentTimeMillis();
+            } else {
+                finish();
+                System.exit(0);
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

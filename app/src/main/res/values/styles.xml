@@ -34,8 +34,20 @@
         <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
         <!--设置右边的菜单按钮成白色-->
         <item name="colorControlNormal">@color/color_fff</item>
+
     </style>
 
+    <!-- App主题没有ActionBar的 -->
+    <style name="AppTheme.BilibiliNoActionBar1" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/color_bilibili</item>
+        <item name="colorAccent">@color/color_bilibili</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+        <!--设置右边的菜单按钮成白色-->
+        <item name="colorControlNormal">@color/color_fff</item>
+
+    </style>
 
     <!-- App主题没有ActionBar的 -->
     <style name="AppTheme.TimingChooseDayActivity" parent="Theme.AppCompat.Light.NoActionBar">

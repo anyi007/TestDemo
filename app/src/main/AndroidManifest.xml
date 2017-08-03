@@ -115,6 +115,13 @@
             >
         </activity>
 
+        <activity
+            android:name=".ui.activity.BilibiliActivity"
+            android:label="@string/title_activity_ClockAlarmActivity"
+            android:theme="@style/AppTheme.BilibiliNoActionBar1"
+            >
+        </activity>
+
     </application>
 
 </manifest>
