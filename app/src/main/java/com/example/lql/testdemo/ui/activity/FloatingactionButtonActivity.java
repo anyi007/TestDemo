@@ -2,10 +2,10 @@ package com.example.lql.testdemo.ui.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import com.example.lql.testdemo.R;
+import com.example.lql.testdemo.ui.BaseActivity;
 import com.example.lql.testdemo.utils.T;
 import com.getbase.floatingactionbutton.FloatingActionButton;
 import com.getbase.floatingactionbutton.FloatingActionsMenu;
@@ -16,7 +16,7 @@ import com.getbase.floatingactionbutton.FloatingActionsMenu;
  * 时  间：
  * 修改备注：
  */
-public class FloatingactionButtonActivity extends AppCompatActivity {
+public class FloatingactionButtonActivity extends BaseActivity {
     private com.getbase.floatingactionbutton.FloatingActionButton actiona;
     private com.getbase.floatingactionbutton.FloatingActionButton actionb;
     private com.getbase.floatingactionbutton.FloatingActionsMenu multipleactions;

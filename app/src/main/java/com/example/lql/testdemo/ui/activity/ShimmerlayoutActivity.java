@@ -2,7 +2,6 @@ package com.example.lql.testdemo.ui.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -12,6 +11,7 @@ import com.example.lql.testdemo.adapter.MyCollectionServiceAdapter;
 import com.example.lql.testdemo.bean.UserFavoriteListBean;
 import com.example.lql.testdemo.http.MOkCallBack;
 import com.example.lql.testdemo.http.SendRequest;
+import com.example.lql.testdemo.ui.BaseActivity;
 import com.example.lql.testdemo.utils.T;
 import com.google.gson.Gson;
 
@@ -27,7 +27,7 @@ import io.supercharge.shimmerlayout.ShimmerLayout;
  * 修改备注：
  */
 
-public class ShimmerlayoutActivity extends AppCompatActivity {
+public class ShimmerlayoutActivity extends BaseActivity {
 
     RecyclerView mRecyclerView;
     ShimmerLayout mShimmerLayout;

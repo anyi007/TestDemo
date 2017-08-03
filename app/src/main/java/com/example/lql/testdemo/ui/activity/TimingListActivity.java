@@ -3,7 +3,6 @@ package com.example.lql.testdemo.ui.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -12,6 +11,7 @@ import com.example.lql.testdemo.R;
 import com.example.lql.testdemo.adapter.TimingListAdapter;
 import com.example.lql.testdemo.db.bean.TimingBean;
 import com.example.lql.testdemo.db.gen.TimingBeanDao;
+import com.example.lql.testdemo.ui.BaseActivity;
 import com.example.lql.testdemo.utils.RecyclerView.DividerListItemDecoration;
 import com.example.lql.testdemo.utils.RecyclerView.OnItemClickListener;
 import com.example.lql.testdemo.utils.greendaoUtils.DBManager;
@@ -25,7 +25,7 @@ import java.util.List;
  * 时  间：2017.7.18
  * 修改备注：
  */
-public class TimingListActivity extends AppCompatActivity {
+public class TimingListActivity extends BaseActivity {
     RecyclerView mRecyclerView;
     TimingListAdapter mTimingListAdapter;
 
@@ -68,8 +68,10 @@ public class TimingListActivity extends AppCompatActivity {
         mTimingListAdapter.setList(mList);
     }
 
+
+
     @Override
-    protected void onResume() {
+    public void onResume() {
         super.onResume();
         getDate();
     }

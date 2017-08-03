@@ -1,14 +1,14 @@
 package com.example.lql.testdemo.ui.fragment;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.lql.testdemo.R;
+import com.example.lql.testdemo.ui.BaseFragment;
 
-public class FiveFragment extends Fragment {
+public class FiveFragment extends BaseFragment {
 
 
     public FiveFragment() {

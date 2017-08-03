@@ -1,10 +1,10 @@
 package com.example.lql.testdemo.ui.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
 
 import com.example.lql.testdemo.R;
+import com.example.lql.testdemo.ui.BaseActivity;
 import com.example.lql.testdemo.utils.hotWords.GoodsSpecView;
 import com.example.lql.testdemo.utils.hotWords.TagViewGroup;
 
@@ -17,7 +17,7 @@ import java.util.List;
  * 时  间：
  * 修改备注：
  */
-public class HotwordsActivity extends AppCompatActivity {
+public class HotwordsActivity extends BaseActivity {
 
     TagViewGroup hot_keyword ;
     ArrayList<String> mList = new ArrayList<>();

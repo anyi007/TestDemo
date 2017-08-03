@@ -3,7 +3,6 @@ package com.example.lql.testdemo.ui.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -12,6 +11,7 @@ import android.widget.TextView;
 import com.example.lql.testdemo.R;
 import com.example.lql.testdemo.db.bean.TimingBean;
 import com.example.lql.testdemo.db.gen.TimingBeanDao;
+import com.example.lql.testdemo.ui.BaseActivity;
 import com.example.lql.testdemo.utils.MyStatusBarUtil;
 import com.example.lql.testdemo.utils.ScreenUtils;
 import com.example.lql.testdemo.utils.T;
@@ -31,7 +31,7 @@ import java.util.List;
  * 时  间：
  * 修改备注：
  */
-public class TimingActivity extends AppCompatActivity implements View.OnClickListener {
+public class TimingActivity extends BaseActivity implements View.OnClickListener {
 
     String type = "-1";
     private com.example.lql.testdemo.utils.pickerview.lib.WheelView hourwheel;

@@ -4,12 +4,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.lql.testdemo.R;
+import com.example.lql.testdemo.ui.BaseActivity;
 import com.example.lql.testdemo.utils.OverScrollViewPager;
 import com.example.lql.testdemo.utils.gildeUtils.GlidePicUtils;
 
@@ -24,7 +24,7 @@ import uk.co.senab.photoview.PhotoViewAttacher;
  * 时  间：
  * 修改备注：
  */
-public class PhotoDetailActivity extends AppCompatActivity {
+public class PhotoDetailActivity extends BaseActivity {
     private ArrayList<String> list_pics;
     OverScrollViewPager pager_detail;
 

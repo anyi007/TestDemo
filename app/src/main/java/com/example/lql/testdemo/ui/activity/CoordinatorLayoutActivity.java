@@ -6,7 +6,6 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -15,6 +14,7 @@ import android.widget.ImageView;
 
 import com.example.lql.testdemo.R;
 import com.example.lql.testdemo.adapter.TestTextViewAdapter;
+import com.example.lql.testdemo.ui.BaseActivity;
 import com.example.lql.testdemo.utils.CollapsingToolbarLayoutState;
 import com.example.lql.testdemo.utils.MyStatusBarUtil;
 import com.example.lql.testdemo.utils.RecyclerView.DividerListItemDecoration;
@@ -34,7 +34,7 @@ import java.util.ArrayList;
  * 3、可以监听展开或者收缩的状态
  * 4、这里提供一个更改FloatingActionButton颜色的方法
  */
-public class CoordinatorLayoutActivity extends AppCompatActivity {
+public class CoordinatorLayoutActivity extends BaseActivity {
 
     private android.support.v7.widget.Toolbar coordinatortoolbar;
     private android.support.v7.widget.RecyclerView coordinatorrecycler;

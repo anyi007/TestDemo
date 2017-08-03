@@ -5,7 +5,6 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
@@ -21,6 +20,7 @@ import com.baoyz.swipemenulistview.SwipeMenuItem;
 import com.baoyz.swipemenulistview.SwipeMenuListView;
 import com.example.lql.testdemo.R;
 import com.example.lql.testdemo.bean.SideslipBean;
+import com.example.lql.testdemo.ui.BaseActivity;
 
 import java.util.ArrayList;
 
@@ -31,7 +31,7 @@ import java.util.ArrayList;
  * 修改备注：
  */
 
-public class SideslipActivity extends AppCompatActivity {
+public class SideslipActivity extends BaseActivity {
     SwipeMenuListView mSwipeMenuListView;
     TestAdapter mTestAdapter;
     ArrayList<SideslipBean> mList = new ArrayList<>();

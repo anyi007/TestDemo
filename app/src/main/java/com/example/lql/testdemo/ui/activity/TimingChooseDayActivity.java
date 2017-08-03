@@ -3,7 +3,6 @@ package com.example.lql.testdemo.ui.activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
@@ -11,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.lql.testdemo.R;
+import com.example.lql.testdemo.ui.BaseActivity;
 import com.example.lql.testdemo.utils.MyStatusBarUtil;
 
 /**
@@ -19,7 +19,7 @@ import com.example.lql.testdemo.utils.MyStatusBarUtil;
  * 时  间：2017.7.18
  * 修改备注：
  */
-public class TimingChooseDayActivity extends AppCompatActivity implements View.OnClickListener {
+public class TimingChooseDayActivity extends BaseActivity implements View.OnClickListener {
 
     private android.support.v7.widget.Toolbar choosedaytoolbar;
     private android.widget.ImageView choosedayday0;

@@ -1,7 +1,6 @@
 package com.example.lql.testdemo.ui.activity;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -10,11 +9,12 @@ import android.widget.ImageView;
 
 import com.example.lql.testdemo.R;
 import com.example.lql.testdemo.adapter.PicRecyclerviewAdapter;
+import com.example.lql.testdemo.ui.BaseActivity;
 import com.example.lql.testdemo.utils.gildeUtils.GlidePicUtils;
 
 import java.util.ArrayList;
 
-public class GildeActivity extends AppCompatActivity implements View.OnClickListener{
+public class GildeActivity extends BaseActivity implements View.OnClickListener{
 
     private android.widget.Button button1;
     private android.widget.Button button2;

@@ -2,10 +2,10 @@ package com.example.lql.testdemo.ui.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 
 import com.example.lql.testdemo.R;
 import com.example.lql.testdemo.db.gen.TimingBeanDao;
+import com.example.lql.testdemo.ui.BaseActivity;
 import com.example.lql.testdemo.utils.LogUtils;
 
 /**
@@ -14,7 +14,7 @@ import com.example.lql.testdemo.utils.LogUtils;
  * 时  间：
  * 修改备注：
  */
-public class ClockAlarmActivity extends AppCompatActivity {
+public class ClockAlarmActivity extends BaseActivity {
 
     TimingBeanDao mTimingBeanDao;
 

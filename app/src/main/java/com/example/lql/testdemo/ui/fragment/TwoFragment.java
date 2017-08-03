@@ -8,11 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.lql.testdemo.R;
+import com.example.lql.testdemo.ui.BaseFragment;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class TwoFragment extends Fragment {
+public class TwoFragment extends BaseFragment {
 
 
     public TwoFragment() {
@@ -27,7 +28,7 @@ public class TwoFragment extends Fragment {
         }
         return twoFragment;
     }
-    
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

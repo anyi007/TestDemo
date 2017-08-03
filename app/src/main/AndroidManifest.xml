@@ -14,6 +14,7 @@
     <!--开机广播-->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
 
+
     <application
         android:name=".application.MyApplication"
         android:allowBackup="true"
@@ -23,6 +24,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon,android:theme">
+
+        <!--友盟技术统计-->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="59828c615312ddb7b7000393"></meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Umeng"></meta-data>
+
 
         <receiver android:name=".utils.TimingUtils.AlarmReceiver"></receiver>
 

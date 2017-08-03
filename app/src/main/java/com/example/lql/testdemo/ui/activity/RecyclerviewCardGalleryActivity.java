@@ -5,7 +5,6 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.FloatingActionButton;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -13,6 +12,7 @@ import android.widget.ImageView;
 
 import com.example.lql.testdemo.R;
 import com.example.lql.testdemo.adapter.CardAdapter;
+import com.example.lql.testdemo.ui.BaseActivity;
 import com.example.lql.testdemo.utils.T;
 import com.view.jameson.library.CardScaleHelper;
 import com.view.jameson.library.utils.BitmapUtils;
@@ -27,7 +27,7 @@ import java.util.ArrayList;
  * 时  间：2017.7.13
  * 修改备注：
  */
-public class RecyclerviewCardGalleryActivity extends AppCompatActivity {
+public class RecyclerviewCardGalleryActivity extends BaseActivity {
 
     private android.widget.ImageView blurView;
     private com.view.jameson.library.SpeedRecyclerView recyclerView;

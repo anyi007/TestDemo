@@ -4,12 +4,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import com.example.lql.testdemo.R;
 import com.example.lql.testdemo.adapter.SimpleFragmentPagerAdapter;
+import com.example.lql.testdemo.ui.BaseActivity;
 import com.example.lql.testdemo.ui.fragment.EightFragment;
 import com.example.lql.testdemo.ui.fragment.FiveFragment;
 import com.example.lql.testdemo.ui.fragment.FourFragment;
@@ -31,7 +31,7 @@ import java.util.ArrayList;
  * 时  间：
  * 修改备注：
  */
-public class BilibiliActivity extends AppCompatActivity {
+public class BilibiliActivity extends BaseActivity {
 
     Toolbar bilibilitooolbar;
     private android.support.v4.view.ViewPager bilibiliviewpager;

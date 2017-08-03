@@ -9,11 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.lql.testdemo.R;
+import com.example.lql.testdemo.ui.BaseFragment;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class EightFragment extends Fragment {
+public class EightFragment extends BaseFragment {
 
 
     public EightFragment() {
