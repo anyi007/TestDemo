@@ -19,7 +19,7 @@
 
         </android.support.v7.widget.Toolbar>
 
-        <com.example.lql.testdemo.utils.PagerSlidingTabStrip
+        <com.example.lql.testdemo.veiw.PagerSlidingTabStrip
             android:id="@+id/bilibili_tabs"
             android:layout_width="match_parent"
             android:layout_height="40dp"
@@ -32,7 +32,7 @@
             app:pstsUnderlineHeight="2dp"
             app:selectedTabTextColor="@color/color_fff"
             >
-        </com.example.lql.testdemo.utils.PagerSlidingTabStrip>
+        </com.example.lql.testdemo.veiw.PagerSlidingTabStrip>
     </android.support.design.widget.AppBarLayout>
 
 

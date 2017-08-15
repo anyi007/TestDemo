@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,156 +12,179 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <Button
-            android:id="@+id/glide_button"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Glide 4.x"/>
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/glide_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Glide 4.x"/>
 
 
-        <Button
-            android:id="@+id/hotwords_button"
-            android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/hotwords_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="热词 商品规格选择"/>
+
+            <Button
+                android:id="@+id/seekbar_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="修饰下seekbar"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="热词 商品规格选择"/>
+            android:layout_marginTop="@dimen/px_10"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/seekbar_button"
-            android:layout_width="wrap_content"
+            <Button
+                android:id="@+id/choose_time_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="选择时间"/>
+
+
+            <Button
+                android:id="@+id/Dialog_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_10"
+                android:text="一个对话框(sweetAlartDialog)"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:text="修饰下seekbar"/>
+            android:layout_marginTop="@dimen/px_10"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/shimmerlayout_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加载过程中的布局闪光效果（shimmerlayout）"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_10"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bigpic_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="看大图"/>
+
+
+            <Button
+                android:id="@+id/sideslip_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_10"
+                android:text="list侧滑"/>
+
+            <Button
+                android:id="@+id/CoordinatorLayout_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_10"
+                android:text="CoordinatorLayout"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_10"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/videolist_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="视频播放列表"/>
+
+            <Button
+                android:id="@+id/recyclerviewCardGallery_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_10"
+                android:text="recyclerview画廊效果"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_10"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/floatingaction_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="好看的floatingactionbutton"/>
+
+            <Button
+                android:id="@+id/timing_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_10"
+                android:text="闹钟定时任务"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_10"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bilibili_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="bilibili的排行页面"/>
+
+            <Button
+                android:id="@+id/setview_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="动态设置距离"/>
+
+            <Button
+                android:id="@+id/rxJava_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="RxJava"/>
+
+        </LinearLayout>
+
 
     </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/px_10"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/choose_time_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="选择时间"/>
-
-
-        <Button
-            android:id="@+id/Dialog_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/px_10"
-            android:text="一个对话框(sweetAlartDialog)"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/px_10"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/shimmerlayout_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="加载过程中的布局闪光效果（shimmerlayout）"/>
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/px_10"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/bigpic_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="看大图"/>
-
-
-        <Button
-            android:id="@+id/sideslip_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/px_10"
-            android:text="list侧滑"/>
-
-        <Button
-            android:id="@+id/CoordinatorLayout_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/px_10"
-            android:text="CoordinatorLayout"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/px_10"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/videolist_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="视频播放列表"/>
-
-        <Button
-            android:id="@+id/recyclerviewCardGallery_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/px_10"
-            android:text="recyclerview画廊效果"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/px_10"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/floatingaction_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="好看的floatingactionbutton"/>
-
-        <Button
-            android:id="@+id/timing_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/px_10"
-            android:text="闹钟定时任务"/>
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/px_10"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/bilibili_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="bilibili的排行页面"/>
-
-
-    </LinearLayout>
-</LinearLayout>
+</RelativeLayout>

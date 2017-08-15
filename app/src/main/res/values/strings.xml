@@ -20,6 +20,7 @@
     <string name="title_activity_TimingChooseDayActivity">选择时间周期</string>
     <string name="title_activity_ClockAlarmActivity">闹钟时间到了，这里响应</string>
     <string name="title_activity_BilibiliActivity">Bilibil的样子</string>
+    <string name="title_activity_RxJavaActivity">rxjava</string>
 
 
     <string name="pickerview_cancel">取消</string>

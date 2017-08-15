@@ -15,6 +15,7 @@ import com.example.lql.testdemo.ui.activity.FloatingactionButtonActivity;
 import com.example.lql.testdemo.ui.activity.GildeActivity;
 import com.example.lql.testdemo.ui.activity.HotwordsActivity;
 import com.example.lql.testdemo.ui.activity.RecyclerviewCardGalleryActivity;
+import com.example.lql.testdemo.ui.activity.RxJavaActivity;
 import com.example.lql.testdemo.ui.activity.SeekbarActivity;
 import com.example.lql.testdemo.ui.activity.ShimmerlayoutActivity;
 import com.example.lql.testdemo.ui.activity.SideslipActivity;
@@ -46,16 +47,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private android.widget.Button FloatingactionButton;
     private android.widget.Button TimingButton;
     private android.widget.Button BilibiliButton;
+    private android.widget.Button SetviewButton;
+    private android.widget.Button RxJavaButton;
+
+
+//    MoveImageview mImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
-
     }
 
     private void initView() {
+
+
+//        mImageView = (MoveImageview) findViewById(R.id.setView_img);
+
+
         //glide4.x
         this.glidebutton = (Button) findViewById(R.id.glide_button);
         this.glidebutton.setOnClickListener(this);
@@ -111,6 +121,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //bilibili排行页面
         this.BilibiliButton = (Button) findViewById(R.id.bilibili_button);
         this.BilibiliButton.setOnClickListener(this);
+
+
+        //动态设置veiw的距离
+        this.SetviewButton = (Button) findViewById(R.id.setview_button);
+        this.SetviewButton.setOnClickListener(this);
+
+        //RxJava
+        this.RxJavaButton = (Button) findViewById(R.id.rxJava_button);
+        this.RxJavaButton.setOnClickListener(this);
 
     }
 
@@ -176,6 +195,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.bilibili_button:
                 startActivity(new Intent(MainActivity.this, BilibiliActivity.class));
+
+                break;
+
+            case R.id.setview_button:
+
+
+                break;
+
+            case R.id.rxJava_button:
+                startActivity(new Intent(MainActivity.this, RxJavaActivity.class));
+
                 break;
 
         }

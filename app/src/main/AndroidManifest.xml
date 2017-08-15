@@ -87,7 +87,9 @@
         </activity>
         <activity
             android:name=".ui.activity.VideoListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/title_activity_VideoList"
+            android:screenOrientation="portrait"
             >
         </activity>
         <activity
@@ -112,12 +114,7 @@
             android:label="@string/title_activity_TimingListActivity"
             >
         </activity>
-        <activity
-            android:name=".ui.activity.TimingChooseDayActivity"
-            android:label="@string/title_activity_TimingChooseDayActivity"
-            android:theme="@style/coordinator_emma_immerse"
-            >
-        </activity>
+
 
         <activity
             android:name=".ui.activity.ClockAlarmActivity"
@@ -129,6 +126,12 @@
             android:name=".ui.activity.BilibiliActivity"
             android:label="@string/title_activity_ClockAlarmActivity"
             android:theme="@style/AppTheme.BilibiliNoActionBar1"
+            >
+        </activity>
+
+        <activity
+            android:name=".ui.activity.RxJavaActivity"
+            android:label="@string/title_activity_RxJavaActivity"
             >
         </activity>
 

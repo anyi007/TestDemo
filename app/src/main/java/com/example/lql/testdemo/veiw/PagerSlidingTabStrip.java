@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-package com.example.lql.testdemo.utils;
+package com.example.lql.testdemo.veiw;
 
 import android.content.Context;
 import android.content.res.TypedArray;
