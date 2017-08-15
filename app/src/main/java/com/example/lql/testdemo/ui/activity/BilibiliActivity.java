@@ -21,7 +21,7 @@ import com.example.lql.testdemo.ui.fragment.TenFragment;
 import com.example.lql.testdemo.ui.fragment.ThreeFragment;
 import com.example.lql.testdemo.ui.fragment.TwoFragment;
 import com.example.lql.testdemo.utils.MyStatusBarUtil;
-import com.example.lql.testdemo.utils.PagerSlidingTabStrip;
+import com.example.lql.testdemo.veiw.PagerSlidingTabStrip;
 
 import java.util.ArrayList;
 
