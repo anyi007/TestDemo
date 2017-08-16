@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.lql.testdemo.R;
+import com.example.lql.testdemo.bean.RxJavaStudentBean;
 import com.example.lql.testdemo.utils.LogUtils;
 
 import java.util.ArrayList;
@@ -32,8 +33,9 @@ public class RxJavaActivity extends AppCompatActivity implements View.OnClickLis
     Button Thread_Button;//线程的变换
     TextView Thread_tv;//线程的变换
 
-    Button Func_button;//转换
+    Button Func_button;//转换(map)
     TextView Func_tv;//转换
+    Button Flatmap_button;//转换(flatmap)
 
 
     Subscriber<String> mSubsrciber;
@@ -62,7 +64,9 @@ public class RxJavaActivity extends AppCompatActivity implements View.OnClickLis
         Func_button.setOnClickListener(this);
         //转换
         Func_tv = (TextView) findViewById(R.id.func_tv);
-
+        //转换（flatmap）
+        Flatmap_button = (Button) findViewById(R.id.flatmap_button);
+        Flatmap_button.setOnClickListener(this);
 
     }
 
@@ -78,6 +82,9 @@ public class RxJavaActivity extends AppCompatActivity implements View.OnClickLis
                 break;
             case R.id.func_button:
                 setFunc();
+                break;
+            case R.id.flatmap_button:
+                setFlatmap();
                 break;
         }
     }
@@ -354,6 +361,91 @@ public class RxJavaActivity extends AppCompatActivity implements View.OnClickLis
             }
         });
         observable.subscribe(subscriber);
+    }
+
+
+    ArrayList<RxJavaStudentBean> mRxJavaStudentBeen = new ArrayList<>();
+
+
+    /**
+     * 这里说转换的第二个关键字flatmap
+     * 先说使用场景，这里用扔物线博客中的例子
+     * 现在有一个学生的bean,然后这个学生的bean中有一个课程的bean
+     * 每个学生有好多个课程，所以学生的课程就是一个list，现在要便利咱们班所有的学生的所有的课程名称
+     * <p>
+     * 这种方式一般只有在需要二次遍历的时候才能用到
+     */
+    private void setFlatmap() {
+        mRxJavaStudentBeen.clear();
+        makeData();
+        //创建观察者
+        final Subscriber subscriber = new Subscriber<RxJavaStudentBean.CurriculumBean>() {
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onNext(RxJavaStudentBean.CurriculumBean s) {
+                LogUtils.Loge(s.getCurriculumName());
+            }
+        };
+
+
+        Observable.from(mRxJavaStudentBeen)
+                .flatMap(new Func1<RxJavaStudentBean, Observable<RxJavaStudentBean.CurriculumBean>>() {
+                    @Override
+                    public Observable<RxJavaStudentBean.CurriculumBean> call(RxJavaStudentBean rxJavaStudentBean) {
+                        return Observable.from(rxJavaStudentBean.getCurriculumList());
+                    }
+                }).subscribe(subscriber);
+
+    }
+
+
+    /**
+     * 转换flatmap需要的数据
+     */
+    private void makeData() {
+        RxJavaStudentBean mRxBean1 = new RxJavaStudentBean();
+        RxJavaStudentBean mRxBean2 = new RxJavaStudentBean();
+        RxJavaStudentBean mRxBean3 = new RxJavaStudentBean();
+        RxJavaStudentBean mRxBean4 = new RxJavaStudentBean();
+        ArrayList<RxJavaStudentBean.CurriculumBean> curriculumBeanArrayList = new ArrayList<>();
+        RxJavaStudentBean.CurriculumBean curriculumBean1 = new RxJavaStudentBean.CurriculumBean();
+        RxJavaStudentBean.CurriculumBean curriculumBean2 = new RxJavaStudentBean.CurriculumBean();
+        RxJavaStudentBean.CurriculumBean curriculumBean3 = new RxJavaStudentBean.CurriculumBean();
+        RxJavaStudentBean.CurriculumBean curriculumBean4 = new RxJavaStudentBean.CurriculumBean();
+        curriculumBean1.setCurriculumName("数学");
+        curriculumBean2.setCurriculumName("英语");
+        curriculumBean3.setCurriculumName("语文");
+        curriculumBean4.setCurriculumName("体育");
+        curriculumBeanArrayList.add(curriculumBean1);
+        curriculumBeanArrayList.add(curriculumBean2);
+        curriculumBeanArrayList.add(curriculumBean3);
+        curriculumBeanArrayList.add(curriculumBean4);
+
+        mRxBean1.setName("小米");
+        mRxBean1.setCurriculumList(curriculumBeanArrayList);
+
+        mRxBean2.setName("二猪");
+        mRxBean2.setCurriculumList(curriculumBeanArrayList);
+
+        mRxBean3.setName("大猪");
+        mRxBean3.setCurriculumList(curriculumBeanArrayList);
+
+        mRxBean4.setName("小红哥");
+        mRxBean4.setCurriculumList(curriculumBeanArrayList);
+
+        mRxJavaStudentBeen.add(mRxBean1);
+        mRxJavaStudentBeen.add(mRxBean2);
+        mRxJavaStudentBeen.add(mRxBean3);
+        mRxJavaStudentBeen.add(mRxBean4);
     }
 
 

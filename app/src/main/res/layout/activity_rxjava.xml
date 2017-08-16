@@ -45,7 +45,7 @@
                 android:id="@+id/func_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="转换"/>
+                android:text="转换（map）"/>
 
             <TextView
                 android:id="@+id/func_tv"
@@ -54,7 +54,18 @@
                 android:layout_marginLeft="@dimen/px_10"
                 android:text="转换的结果"/>
 
+        </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_10">
+
+            <Button
+                android:id="@+id/flatmap_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="转换（flatMap）"/>
         </LinearLayout>
     </LinearLayout>
 
