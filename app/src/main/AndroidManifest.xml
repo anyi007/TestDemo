@@ -135,6 +135,12 @@
             >
         </activity>
 
+        <activity
+            android:name=".ui.activity.RetrofitActivity"
+            android:label="@string/title_activity_RetrofitActivity"
+            >
+        </activity>
+
     </application>
 
 </manifest>

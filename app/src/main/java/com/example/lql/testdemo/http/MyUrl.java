@@ -14,5 +14,9 @@ public class MyUrl {
     //下载地址
     public static String DownLoad = "";
 
+    //文件上传
+    public static String Upload = "https://www.51cnkicheck.com/usercenter/Upload";
+
+
 
 }

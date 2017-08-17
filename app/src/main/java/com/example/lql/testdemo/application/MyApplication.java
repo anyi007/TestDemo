@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Application;
 
 import com.example.lql.testdemo.utils.AppConstant;
-import com.example.lql.testdemo.utils.CrashHandler;
 import com.example.lql.testdemo.utils.PublicStaticData;
 import com.example.lql.testdemo.utils.greendaoUtils.DBManager;
 
@@ -32,8 +31,9 @@ public class MyApplication extends Application {
         //初始化数据库
         DBManager.getInstance().init(this);
         PublicStaticData.mySharedPreferences = getSharedPreferences(AppConstant.PREFRENCE_NAME, Activity.MODE_PRIVATE);//初始化PreferencesUtils
-        CrashHandler crashHandler = CrashHandler.getInstance();
-        crashHandler.init(getApplicationContext());
+        //全局错误监听
+//        CrashHandler crashHandler = CrashHandler.getInstance();
+//        crashHandler.init(getApplicationContext());
         super.onCreate();
     }
 

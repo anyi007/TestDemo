@@ -25,4 +25,22 @@ public class SendRequest {
                 .build();
         OkHttpUtils.MyPost(formBody, MyUrl.UserFavoriteList, mOkCallBack);
     }
+
+
+//    /**
+//     * 上传文件
+//     * @param Userid    id
+//     * @param mFile     需要上传的文件  File
+//     * @param mOkCallBack   回调
+//     */
+//    public static void Upload(String Userid, File mFile, OkHttpClientManager.ResultCallback mOkCallBack){
+//        OkHttpClientManager.Param param = new OkHttpClientManager.Param("Userid", Userid);
+//        try {
+//            OkHttpClientManager.postAsyn(MyUrl.Upload, mOkCallBack, mFile, "file", param);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
+
 }

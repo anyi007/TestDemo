@@ -15,6 +15,7 @@ import com.example.lql.testdemo.ui.activity.FloatingactionButtonActivity;
 import com.example.lql.testdemo.ui.activity.GildeActivity;
 import com.example.lql.testdemo.ui.activity.HotwordsActivity;
 import com.example.lql.testdemo.ui.activity.RecyclerviewCardGalleryActivity;
+import com.example.lql.testdemo.ui.activity.RetrofitActivity;
 import com.example.lql.testdemo.ui.activity.RxJavaActivity;
 import com.example.lql.testdemo.ui.activity.SeekbarActivity;
 import com.example.lql.testdemo.ui.activity.ShimmerlayoutActivity;
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private android.widget.Button BilibiliButton;
     private android.widget.Button SetviewButton;
     private android.widget.Button RxJavaButton;
+    private android.widget.Button RetrofitButton;
 
 
 //    MoveImageview mImageView;
@@ -131,6 +133,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.RxJavaButton = (Button) findViewById(R.id.rxJava_button);
         this.RxJavaButton.setOnClickListener(this);
 
+        //Retrofit
+        this.RetrofitButton = (Button) findViewById(R.id.retrofit_button);
+        this.RetrofitButton.setOnClickListener(this);
+
     }
 
     @Override
@@ -195,7 +201,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.bilibili_button:
                 startActivity(new Intent(MainActivity.this, BilibiliActivity.class));
-
                 break;
 
             case R.id.setview_button:
@@ -205,7 +210,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.rxJava_button:
                 startActivity(new Intent(MainActivity.this, RxJavaActivity.class));
+                break;
 
+            case R.id.retrofit_button:
+                startActivity(new Intent(MainActivity.this, RetrofitActivity.class));
                 break;
 
         }

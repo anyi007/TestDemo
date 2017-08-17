@@ -74,9 +74,11 @@ dependencies {
     compile 'fm.jiecao:jiecaovideoplayer:5.7'
     compile files('libs/umeng-analytics-v6.1.2.jar')
     compile files('libs/utdid4all-1.0.4.jar')
-
-
-
     compile 'io.reactivex:rxjava:1.0.14'
     compile 'io.reactivex:rxandroid:1.0.1'
+    compile 'com.squareup.retrofit2:retrofit:2.3.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.2'
+    compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
+    //一个不错的压缩工具   github地址：https://github.com/Curzibn/Luban
+    compile 'top.zibin:Luban:1.1.2'
 }
