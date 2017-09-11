@@ -141,6 +141,12 @@
             >
         </activity>
 
+        <activity
+            android:name=".ui.activity.MyHRecycleActivity"
+            android:label="@string/title_activity_MyHRecycleActivity"
+            >
+        </activity>
+
     </application>
 
 </manifest>

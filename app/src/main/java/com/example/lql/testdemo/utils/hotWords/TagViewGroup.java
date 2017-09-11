@@ -22,17 +22,17 @@ import java.util.List;
  * 作  者：liyujiang
  * 时  间：2017/5/24
  * 使  用：
- hot_keyword = (TagViewGroup) findViewById(R.id.hot_keyword);
- TagViewGroup.UiConfig config = new TagViewGroup.UiConfig();
- config.setContainerPadding(0);
- config.setButtonTextColor(0xFF111111, 0xFF111111);
- config.setButtonBackgroundResource(R.drawable.hot_keyword_bg_selector);
- hot_keyword.setData(config, mList, new TagViewGroup.OnSelectedListener() {
-@Override
-public void onSelected(String name) {
-Toast.makeText(getBaseContext(), name, Toast.LENGTH_SHORT).show();
-}
-});
+ * hot_keyword = (TagViewGroup) findViewById(R.id.hot_keyword);
+ * TagViewGroup.UiConfig config = new TagViewGroup.UiConfig();
+ * config.setContainerPadding(0);
+ * config.setButtonTextColor(0xFF111111, 0xFF111111);
+ * config.setButtonBackgroundResource(R.drawable.hot_keyword_bg_selector);
+ * hot_keyword.setData(config, mList, new TagViewGroup.OnSelectedListener() {
+ *
+ * @Override public void onSelected(String name) {
+ * Toast.makeText(getBaseContext(), name, Toast.LENGTH_SHORT).show();
+ * }
+ * });
  * 修改备注：
  */
 
@@ -292,11 +292,11 @@ public class TagViewGroup extends ViewGroup implements CompoundButton.OnCheckedC
         /**
          * 属性按钮文字颜色
          */
-        private int buttonTextColor = 0xFF111111;
+        private int buttonTextColor = 0xFFFFFFFF;
         /**
          * 选择的属性按钮文字颜色
          */
-        private int buttonSelectedTextColor = 0xFFFF5555;
+        private int buttonSelectedTextColor = 0xFFFFFFFF;
         /**
          * 属性按钮文字大小
          */

@@ -14,6 +14,7 @@ import com.example.lql.testdemo.bean.UserFavoriteListBeanForRetrofit;
 import com.example.lql.testdemo.retrofit.TestApi;
 import com.example.lql.testdemo.utils.ChoosePicUtil;
 import com.example.lql.testdemo.utils.LogUtils;
+import com.example.lql.testdemo.utils.T;
 import com.example.lql.testdemo.utils.gildeUtils.GlidePicUtils;
 
 import java.io.File;
@@ -149,6 +150,10 @@ public class RetrofitActivity extends AppCompatActivity implements View.OnClickL
      * 文件上传
      */
     private void uploadMethod() {
+        if (mFile1 == null) {
+            T.shortToast(getApplicationContext(),"请先点下边的第一个美女选择拍一张照片");
+            return;
+        }
         Retrofit retrofit = new Retrofit.Builder()
                 //这里建议：- Base URL: 总是以/结尾；- @Url: 不要以/开头
                 .baseUrl("https://www.51cnkicheck.com/")
@@ -256,12 +261,15 @@ public class RetrofitActivity extends AppCompatActivity implements View.OnClickL
                     public void onSuccess(File file) {
                         switch (choosePicNumber) {
                             case 1:
+                                mFile1=file;
                                 GlidePicUtils.LoadImg(RetrofitActivity.this, img1, file.getPath());
                                 break;
                             case 2:
+                                mFile2=file;
                                 GlidePicUtils.LoadImg(RetrofitActivity.this, img2, file.getPath());
                                 break;
                             case 3:
+                                mFile3=file;
                                 GlidePicUtils.LoadImg(RetrofitActivity.this, img3, file.getPath());
                                 break;
                         }
