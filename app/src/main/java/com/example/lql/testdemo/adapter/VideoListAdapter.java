@@ -8,7 +8,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.lql.testdemo.R;
+import com.example.lql.testdemo.bean.NBAVideoDataBean;
+import com.example.lql.testdemo.bean.NBAVideoInfo;
+import com.example.lql.testdemo.utils.LogUtils;
 import com.example.lql.testdemo.utils.RecyclerView.OnItemClickListener;
+import com.example.lql.testdemo.utils.gildeUtils.GlidePicUtils;
 
 import java.util.ArrayList;
 
@@ -22,18 +26,25 @@ import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
  */
 
 public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.VideoListViewHolder> {
-
+    String s1 = "http://2449.vod.myqcloud.com/2449_22ca37a6ea9011e5acaaf51d105342e3.f20.mp4";
     private Context mContext;
 
     public VideoListAdapter(Context mContext) {
         this.mContext = mContext;
     }
 
-    ArrayList<String> mList = new ArrayList<>();
+    ArrayList<NBAVideoInfo> mList = new ArrayList<>();
+    ArrayList<NBAVideoDataBean> mListInfo = new ArrayList<>();
 
-    public void setList(ArrayList<String> mDataList) {
+    public void setList(ArrayList<NBAVideoInfo> mDataList) {
         mList.clear();
         mList.addAll(mDataList);
+        notifyDataSetChanged();
+    }
+
+    public void setInfoList(ArrayList<NBAVideoDataBean> mDataList) {
+        mListInfo.clear();
+        mListInfo.addAll(mDataList);
         notifyDataSetChanged();
     }
 
@@ -60,8 +71,20 @@ public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.Vide
             });
         }
 
-        holder.mTitle.setText("这里是标题" + position);
 
+        if (mList.get(position).vl.vi != null && mList.get(position).vl.vi.size() > 0) {
+            String vid = mList.get(position).vl.vi.get(0).vid;
+            LogUtils.Loge("vid" + vid);
+            String vkey = mList.get(position).vl.vi.get(0).fvkey;
+            LogUtils.Loge("vkey" + vkey);
+            String url = mList.get(position).vl.vi.get(0).ul.ui.get(0).url + vid + ".mp4?vkey=" + vkey;
+
+            holder.mJCVideoPlayerStandard.setUp(url, holder.mJCVideoPlayerStandard.SCREEN_LAYOUT_NORMAL, mList.get(position).vl.vi.get(0).ti);
+        }
+
+        holder.mTitle.setText(mListInfo.get(position).getTitle() + position);
+
+        GlidePicUtils.LoadImg(mContext, holder.mJCVideoPlayerStandard.thumbImageView, mListInfo.get(position).getImgurl());
 
 
     }
@@ -82,4 +105,6 @@ public class VideoListAdapter extends RecyclerView.Adapter<VideoListAdapter.Vide
             mTitle = (TextView) itemView.findViewById(R.id.item_title);
         }
     }
+
+
 }

@@ -49,6 +49,22 @@
 
     </style>
 
+    <!-- 退出登录的提示框 -->
+    <style name="IDialogStyle">
+        <!-- <item name="android:windowBackground">@android:color/transparent</item> -->
+        <item name="colorAccent">@color/color_bilibili</item>
+        <item name="actionOverflowMenuStyle">@style/OverflowMenu</item>
+        <!--设置右边的菜单按钮成白色-->
+        <item name="colorControlNormal">@color/color_fff</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+
     <!-- App主题没有ActionBar的 -->
     <style name="AppTheme.TimingChooseDayActivity" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->

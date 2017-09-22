@@ -20,145 +20,157 @@ import com.example.lql.testdemo.R;
  * 修改备注：
  */
 public class GlidePicUtils {
-    private static  RequestOptions requestOptions;
+    private static RequestOptions requestOptions;
 
     /**
      * 加载普通图片
+     *
      * @param mContext
      * @param imageView
      * @param url
      */
-    public static void LoadImg(Context mContext , ImageView imageView , String url ){
-        if(check(mContext , imageView , url)){
+    public static void LoadImg(Context mContext, ImageView imageView, String url) {
+        if (check(mContext, imageView, url)) {
             GlideApp.with(mContext).asBitmap()
                     .load(url)
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .preload();
 
             GlideApp.with(mContext)
-                .asBitmap()
-                .load(url)
-                .error(R.mipmap.ic_launcher_round)
-                .placeholder(R.mipmap.ic_launcher_round)
-                .fallback(R.drawable.test)//当url为空时，显示图片
-                .into(imageView);
-        }else{
+                    .asBitmap()
+                    .load(url)
+                    .error(R.mipmap.ic_launcher_round)
+                    .placeholder(R.mipmap.ic_launcher_round)
+                    .fallback(R.drawable.test)//当url为空时，显示图片
+                    .into(imageView);
+        } else {
             Toast.makeText(mContext, "参数不正确", Toast.LENGTH_SHORT).show();
         }
     }
 
 
+    public static void LoadImgByBitmap(Context mContext, ImageView imageView, Bitmap bitmap) {
+        GlideApp.with(mContext).asBitmap()
+                .load(bitmap)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .preload();
+
+        GlideApp.with(mContext)
+                .asBitmap()
+                .load(bitmap)
+                .error(R.mipmap.ic_launcher_round)
+                .placeholder(R.mipmap.ic_launcher_round)
+                .fallback(R.drawable.test)//当url为空时，显示图片
+                .into(imageView);
+    }
+
+
     /**
      * 加载圆形图片
+     *
      * @param mContext
      * @param imageView
      * @param url
      */
-    public static void LoadCircleImg(Context mContext , ImageView imageView , String url ){
-        if(check(mContext , imageView , url)){
+    public static void LoadCircleImg(Context mContext, ImageView imageView, String url) {
+        if (check(mContext, imageView, url)) {
 
             GlideApp.with(mContext).asBitmap()
                     .load(url)
                     .diskCacheStrategy(DiskCacheStrategy.ALL)
                     .preload();
 
-            RequestBuilder<Bitmap>   bitmapRequestBuilder=CreatRequestBuilder(mContext , url);
+            RequestBuilder<Bitmap> bitmapRequestBuilder = CreatRequestBuilder(mContext, url);
 
-            if(requestOptions == null){
-                requestOptions=CreateOption();
+            if (requestOptions == null) {
+                requestOptions = CreateOption();
             }
 
             //在RequestOptions中使用Transformations
             requestOptions.transform(new CircleTransform(mContext));
             //RequestBuilder<Bitmap> 中添加RequestOptions
             bitmapRequestBuilder.apply(requestOptions).into(imageView);
-        }else{
+        } else {
             Toast.makeText(mContext, "参数不正确", Toast.LENGTH_SHORT).show();
         }
     }
-
 
 
     /**
      * 加载圆角图片
+     *
      * @param mContext
      * @param imageView
      * @param url
      */
-    public static void LoadRoundImg(Context mContext , ImageView imageView , String url , int radius){
-        if(check(mContext , imageView , url)){
+    public static void LoadRoundImg(Context mContext, ImageView imageView, String url, int radius) {
+        if (check(mContext, imageView, url)) {
 
             GlideApp.with(mContext).asBitmap()
-                .load(url)
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
-                .preload();
+                    .load(url)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .preload();
 
-            RequestBuilder<Bitmap>   bitmapRequestBuilder=CreatRequestBuilder(mContext , url);
+            RequestBuilder<Bitmap> bitmapRequestBuilder = CreatRequestBuilder(mContext, url);
 
-            if(requestOptions == null){
-                requestOptions=CreateOption();
+            if (requestOptions == null) {
+                requestOptions = CreateOption();
             }
 
             //在RequestOptions中使用Transformations
-            requestOptions.transform(new RoundTransform(mContext , radius));
+            requestOptions.transform(new RoundTransform(mContext, radius));
 
             //RequestBuilder<Bitmap> 中添加RequestOptions
             bitmapRequestBuilder.apply(requestOptions).into(imageView);
-        }else{
+        } else {
             Toast.makeText(mContext, "参数不正确", Toast.LENGTH_SHORT).show();
         }
     }
 
 
-
-
     /**
      * 加载资源文件
+     *
      * @param mContext
      * @param imageView
      * @param requestId
      */
-    public static void LoadRequest(Context mContext , ImageView imageView ,  int requestId){
+    public static void LoadRequest(Context mContext, ImageView imageView, int requestId) {
         RequestBuilder<Drawable> drawableRequestBuilder = GlideApp.with(mContext).
                 load(requestId);
         drawableRequestBuilder.into(imageView);
     }
 
 
-
-
-
-
-
-    private static RequestBuilder<Bitmap> CreatRequestBuilder(Context mContext , String url ){
-        RequestBuilder<Bitmap> bitmapRequestBuilder= GlideApp.with(mContext)
+    private static RequestBuilder<Bitmap> CreatRequestBuilder(Context mContext, String url) {
+        RequestBuilder<Bitmap> bitmapRequestBuilder = GlideApp.with(mContext)
                 .asBitmap()//指定Bitmap类型的RequestBuilder
                 .load(url)//网络URL
                 .diskCacheStrategy(DiskCacheStrategy.ALL)//缓存策略
                 .error(R.mipmap.ic_launcher_round)
                 .placeholder(R.mipmap.ic_launcher_round)
                 .fallback(R.drawable.test);//当url为空时，显示图片
-        return  bitmapRequestBuilder;
+        return bitmapRequestBuilder;
     }
 
 
-    private static RequestOptions CreateOption(){
-       return  new RequestOptions();
+    private static RequestOptions CreateOption() {
+        return new RequestOptions();
     }
-
 
 
     /**
      * 检查参数是否为空
+     *
      * @param mContext
      * @param img
      * @param url
      * @return
      */
-    private static boolean check(Context mContext , ImageView img , String url ){
-        if(null == mContext  || null == img || null == url || TextUtils.isEmpty(url)){
+    private static boolean check(Context mContext, ImageView img, String url) {
+        if (null == mContext || null == img || null == url || TextUtils.isEmpty(url)) {
             return false;
-        }else{
+        } else {
             return true;
         }
     }

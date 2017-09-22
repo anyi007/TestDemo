@@ -1,23 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                              android:id="@+id/mySwre"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical">
 
-    <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
-        android:id="@+id/jiecao_Player"
-        android:layout_width="match_parent"
-        android:layout_height="200dp">
-
-    </fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard>
-
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/video_recycle"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard
+            android:id="@+id/jiecao_Player"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="gone">
 
-    </android.support.v7.widget.RecyclerView>
+        </fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard>
 
 
-</LinearLayout>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/video_recycle"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <include layout="@layout/include_bottom"
+                 android:visibility="gone"></include>
+    </LinearLayout>
+
+
+</android.support.v4.widget.SwipeRefreshLayout>

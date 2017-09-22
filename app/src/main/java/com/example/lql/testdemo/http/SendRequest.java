@@ -2,6 +2,8 @@ package com.example.lql.testdemo.http;
 
 import okhttp3.FormBody;
 
+import static com.example.lql.testdemo.http.MyUrl.getNBAVideoArticleId;
+
 /**
  * 类描述：请求数据的方法
  * 作  者：李清林
@@ -43,4 +45,28 @@ public class SendRequest {
 //    }
 
 
+    /**
+     * 拿到视频的数据（第一步）200条
+     *
+     * @param mOkCallBack
+     */
+    public static void getHighlightVideoArticleIds(MOkCallBack mOkCallBack) {
+        OkHttpUtils.MyGet(getNBAVideoArticleId(), mOkCallBack);
+    }
+
+
+    /**
+     * 拿到每一条视频的数据  传进来视频的id，用逗号隔开
+     *
+     * @param ArticleIds
+     * @param mOkCallBack
+     */
+    public static void getNBAVideoData(String ArticleIds, MOkCallBack mOkCallBack) {
+        OkHttpUtils.MyGet(MyUrl.getNBAVideoData(ArticleIds), mOkCallBack);
+    }
+
+
+    public  static void getNBAVideoRealUrl(String VIds, MOkCallBack mOkCallBack){
+        OkHttpUtils.MyGet(MyUrl.getNBAVideoRealUrl(VIds), mOkCallBack);
+    }
 }
