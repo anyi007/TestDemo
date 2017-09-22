@@ -147,6 +147,17 @@
             android:label="@string/title_activity_MyHRecycleActivity"
             >
         </activity>
+        <activity
+            android:name=".ui.activity.EventBusActivity"
+            android:label="@string/title_activity_EventBusActivity"
+            >
+        </activity>
+
+        <activity
+            android:name=".ui.activity.EventBusActivity2"
+            android:label="@string/title_activity_EventBusActivity"
+            >
+        </activity>
 
     </application>
 

@@ -23,6 +23,7 @@
     <string name="title_activity_RxJavaActivity">RxJava</string>
     <string name="title_activity_RetrofitActivity">Retrofit</string>
     <string name="title_activity_MyHRecycleActivity">横向滑动的recyclerview</string>
+    <string name="title_activity_EventBusActivity">事件总线</string>
 
 
     <string name="pickerview_cancel">取消</string>

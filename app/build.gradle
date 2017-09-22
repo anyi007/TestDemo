@@ -81,4 +81,5 @@ dependencies {
     compile 'com.squareup.retrofit2:converter-scalars:2.3.0'
     //一个不错的压缩工具   github地址：https://github.com/Curzibn/Luban
     compile 'top.zibin:Luban:1.1.2'
+    compile 'org.greenrobot:eventbus:3.0.0'
 }

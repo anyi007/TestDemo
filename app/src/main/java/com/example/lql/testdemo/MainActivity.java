@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.example.lql.testdemo.ui.activity.BigPicActivity;
 import com.example.lql.testdemo.ui.activity.BilibiliActivity;
 import com.example.lql.testdemo.ui.activity.CoordinatorLayoutActivity;
+import com.example.lql.testdemo.ui.activity.EventBusActivity;
 import com.example.lql.testdemo.ui.activity.FloatingactionButtonActivity;
 import com.example.lql.testdemo.ui.activity.GildeActivity;
 import com.example.lql.testdemo.ui.activity.HotwordsActivity;
@@ -36,11 +37,7 @@ import static com.example.lql.testdemo.R.id.choose_time_button;
 /**
  * 在页面中没有展示出来的部分：
  * 1、全局异常监听（使用查看Application）
- *
- *
- *
- *
- *
+ * 2、GreenDao的使用（在闹钟部分有）
  */
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -64,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private android.widget.Button RxJavaButton;
     private android.widget.Button RetrofitButton;
     private android.widget.Button RecyclerviewButton;
-    private android.widget.Button GreenDaoButton;
+    private android.widget.Button EventBusButton;
 
 
 //    MoveImageview mImageView;
@@ -155,9 +152,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.RecyclerviewButton = (Button) findViewById(R.id.recyclerview_button);
         this.RecyclerviewButton.setOnClickListener(this);
 
-        //GreenDao数据库操作
-        this.GreenDaoButton = (Button) findViewById(R.id.GreenDao_button);
-        this.GreenDaoButton.setOnClickListener(this);
+        //事件总线
+        this.EventBusButton = (Button) findViewById(R.id.EventBus_button);
+        this.EventBusButton.setOnClickListener(this);
 
     }
 
@@ -242,8 +239,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this, MyHRecycleActivity.class));
                 break;
 
-            case R.id.GreenDao_button://GreenDao数据库操作
-
+            case R.id.EventBus_button://事件总线
+                startActivity(new Intent(MainActivity.this, EventBusActivity.class));
                 break;
 
         }

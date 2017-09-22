@@ -208,11 +208,11 @@
                     android:text="横向recyclerview"/>
 
                 <Button
-                    android:id="@+id/GreenDao_button"
+                    android:id="@+id/EventBus_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/px_10"
-                    android:text="GreenDao"/>
+                    android:text="EventBus"/>
             </LinearLayout>
 
         </LinearLayout>
