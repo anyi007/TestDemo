@@ -119,14 +119,15 @@
         <activity
             android:name=".ui.activity.ClockAlarmActivity"
             android:label="@string/title_activity_ClockAlarmActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/IDialogStyle"
             >
         </activity>
 
         <activity
             android:name=".ui.activity.BilibiliActivity"
-            android:label="@string/title_activity_ClockAlarmActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/IDialogStyle"
+            android:label="@string/title_activity_BilibiliActivity"
+            android:theme="@style/AppTheme.BilibiliNoActionBar1"
             >
         </activity>
 
@@ -156,6 +157,14 @@
         <activity
             android:name=".ui.activity.EventBusActivity2"
             android:label="@string/title_activity_EventBusActivity"
+            >
+        </activity>
+
+
+
+        <activity
+            android:name=".ui.activity.shop.ShopMainActivity"
+            android:label="@string/title_activity_ShopMainActivity"
             >
         </activity>
 

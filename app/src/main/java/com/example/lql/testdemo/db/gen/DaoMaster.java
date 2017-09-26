@@ -22,11 +22,33 @@ public class DaoMaster extends AbstractDaoMaster {
     /** Creates underlying database table using DAOs. */
     public static void createAllTables(Database db, boolean ifNotExists) {
         TimingBeanDao.createTable(db, ifNotExists);
+        AddressBeanDao.createTable(db, ifNotExists);
+        CollectionBeanDao.createTable(db, ifNotExists);
+        CommodityBeanDao.createTable(db, ifNotExists);
+        CommoditySizeBeanDao.createTable(db, ifNotExists);
+        CommodityTypeBeanDao.createTable(db, ifNotExists);
+        EvaluateBeanDao.createTable(db, ifNotExists);
+        LogisticsBeanDao.createTable(db, ifNotExists);
+        OrderBeanDao.createTable(db, ifNotExists);
+        ShoppingCartBeanDao.createTable(db, ifNotExists);
+        UserBeanDao.createTable(db, ifNotExists);
+        NoticeBeanDao.createTable(db, ifNotExists);
     }
 
     /** Drops underlying database table using DAOs. */
     public static void dropAllTables(Database db, boolean ifExists) {
         TimingBeanDao.dropTable(db, ifExists);
+        AddressBeanDao.dropTable(db, ifExists);
+        CollectionBeanDao.dropTable(db, ifExists);
+        CommodityBeanDao.dropTable(db, ifExists);
+        CommoditySizeBeanDao.dropTable(db, ifExists);
+        CommodityTypeBeanDao.dropTable(db, ifExists);
+        EvaluateBeanDao.dropTable(db, ifExists);
+        LogisticsBeanDao.dropTable(db, ifExists);
+        OrderBeanDao.dropTable(db, ifExists);
+        ShoppingCartBeanDao.dropTable(db, ifExists);
+        UserBeanDao.dropTable(db, ifExists);
+        NoticeBeanDao.dropTable(db, ifExists);
     }
 
     /**
@@ -46,6 +68,17 @@ public class DaoMaster extends AbstractDaoMaster {
     public DaoMaster(Database db) {
         super(db, SCHEMA_VERSION);
         registerDaoClass(TimingBeanDao.class);
+        registerDaoClass(AddressBeanDao.class);
+        registerDaoClass(CollectionBeanDao.class);
+        registerDaoClass(CommodityBeanDao.class);
+        registerDaoClass(CommoditySizeBeanDao.class);
+        registerDaoClass(CommodityTypeBeanDao.class);
+        registerDaoClass(EvaluateBeanDao.class);
+        registerDaoClass(LogisticsBeanDao.class);
+        registerDaoClass(OrderBeanDao.class);
+        registerDaoClass(ShoppingCartBeanDao.class);
+        registerDaoClass(UserBeanDao.class);
+        registerDaoClass(NoticeBeanDao.class);
     }
 
     public DaoSession newSession() {

@@ -24,6 +24,7 @@
     <string name="title_activity_RetrofitActivity">Retrofit</string>
     <string name="title_activity_MyHRecycleActivity">横向滑动的recyclerview</string>
     <string name="title_activity_EventBusActivity">事件总线</string>
+    <string name="title_activity_ShopMainActivity">商场效果</string>
 
 
     <string name="pickerview_cancel">取消</string>
@@ -45,4 +46,37 @@
     <string name="ServiceError_string">服务器异常</string>
     <!--数据解析错误-->
     <string name="AnalysisError_string">数据解析错误</string>
+
+
+    <!--=========================================================商城数据=====================================-->
+    <string name="noticeContent1">https://article.jd.com/?id=306508</string>
+    <string name="noticeContent2">https://article.jd.com/?id=358444</string>
+    <string name="noticeContent3">https://article.jd.com/?id=359732</string>
+    <string name="noticeContent4">https://article.jd.com/?id=61104</string>
+    <string name="noticeContent5">https://article.jd.com/?id=182301</string>
+    <string name="noticeContent6">https://article.jd.com/?id=363475</string>
+    <string name="noticeContent7">https://article.jd.com/?id=312928</string>
+    <string name="noticeContent8">https://article.jd.com/?id=182425</string>
+    <string name="noticeContent9">https://article.jd.com/?id=165270</string>
+    <string name="noticeContent10">https://article.jd.com/?id=187017</string>
+    <string name="noticeContent11">https://article.jd.com/?id=169859</string>
+    <string name="noticeContent12">https://article.jd.com/?id=15145</string>
+    <string name="noticeContent13">https://article.jd.com/?id=201814</string>
+    <string name="noticeContent14">https://article.jd.com/?id=123118</string>
+
+
+    <string name="noticeTitle1">iPhone7彻底崩盘，价格至冰点价, 比国产还便宜</string>
+    <string name="noticeTitle2">“液体丝袜”这么火，为什么很多妹子还是穿传统丝袜？</string>
+    <string name="noticeTitle3">在无数寂寞的夜里，我就是用这些达到了男人都给不了的快感</string>
+    <string name="noticeTitle4">鞋子太多无处摆放？使用这些工具，轻松解决</string>
+    <string name="noticeTitle5">总穿这种裤子，男孩长大后可能会不孕不育</string>
+    <string name="noticeTitle6">对，就这一套，专治草莓鼻、酒糟星人</string>
+    <string name="noticeTitle7">男人吻你的正确姿势解析，他手放哪里？</string>
+    <string name="noticeTitle8">这样削水果，优雅得不像话！</string>
+    <string name="noticeTitle9">为什么长得好看的女生多数没有男朋友？原因竟是这个。</string>
+    <string name="noticeTitle10">小米负面新闻全面爆发，雷军微博发话让人心疼</string>
+    <string name="noticeTitle11">为什么妹子们夏天还要穿丝袜，以下几个理由够了吗？</string>
+    <string name="noticeTitle12">无限流量套餐真的来了！超额只限速不收费</string>
+    <string name="noticeTitle13">洗头早上还是晚上好？多数人都搞错了，难怪老脱发</string>
+    <string name="noticeTitle14">比iPhone8 S8颜值更高！华为首款全面屏手机曝光</string>
 </resources>

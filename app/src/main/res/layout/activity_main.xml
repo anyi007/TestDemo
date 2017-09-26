@@ -215,6 +215,22 @@
                     android:text="EventBus"/>
             </LinearLayout>
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_10"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/Shop_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_10"
+                    android:text="商城效果"/>
+
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private android.widget.Button RetrofitButton;
     private android.widget.Button RecyclerviewButton;
     private android.widget.Button EventBusButton;
+    private android.widget.Button ShopButton;
 
 
 //    MoveImageview mImageView;
@@ -156,6 +157,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.EventBusButton = (Button) findViewById(R.id.EventBus_button);
         this.EventBusButton.setOnClickListener(this);
 
+
+        //商城的效果
+        this.ShopButton = (Button) findViewById(R.id.Shop_button);
+        this.ShopButton.setOnClickListener(this);
+
     }
 
     @Override
@@ -240,6 +246,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.EventBus_button://事件总线
+                startActivity(new Intent(MainActivity.this, EventBusActivity.class));
+                break;
+
+            case R.id.Shop_button://商城的效果
                 startActivity(new Intent(MainActivity.this, EventBusActivity.class));
                 break;
 
