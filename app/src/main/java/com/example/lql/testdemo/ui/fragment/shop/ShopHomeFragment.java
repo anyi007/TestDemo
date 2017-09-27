@@ -34,12 +34,14 @@ public class ShopHomeFragment extends BaseFragment {
     }
 
     @Override
-    protected void initView(View rootView, Bundle savedInstanceState) {
+    protected void initData() {
 
     }
 
     @Override
-    protected void initData() {
+    protected void initView(View rootView, Bundle savedInstanceState) {
 
     }
+
+
 }

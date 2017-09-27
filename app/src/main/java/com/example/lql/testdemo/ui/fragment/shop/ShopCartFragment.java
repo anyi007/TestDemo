@@ -33,13 +33,15 @@ public class ShopCartFragment extends BaseFragment {
     }
 
     @Override
-    protected void initView(View rootView, Bundle savedInstanceState) {
+    protected void initData() {
 
     }
 
     @Override
-    protected void initData() {
+    protected void initView(View rootView, Bundle savedInstanceState) {
 
     }
+
+
 
 }

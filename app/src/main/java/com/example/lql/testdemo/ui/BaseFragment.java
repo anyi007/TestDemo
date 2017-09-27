@@ -58,6 +58,10 @@ public abstract class BaseFragment extends Fragment {
      */
     protected abstract int provideContentViewId();
 
+    /**
+     * 初始化Data
+     */
+    protected abstract void initData();
 
     /**
      * 初始化视图控件
@@ -65,9 +69,6 @@ public abstract class BaseFragment extends Fragment {
     protected abstract void initView(View rootView, Bundle savedInstanceState);
 
 
-    /**
-     * 初始化Data
-     */
-    protected abstract void initData();
+
 
 }
