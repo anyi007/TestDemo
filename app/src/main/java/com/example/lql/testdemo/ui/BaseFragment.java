@@ -1,5 +1,6 @@
 package com.example.lql.testdemo.ui;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -14,6 +15,14 @@ import com.umeng.analytics.MobclickAgent;
  */
 
 public abstract class BaseFragment extends Fragment {
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        initData();
+    }
+
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +35,7 @@ public abstract class BaseFragment extends Fragment {
         if (0 != provideContentViewId()) {
             rootView = inflater.inflate(provideContentViewId(), container, false);
         }
+        initView(rootView, savedInstanceState);
         return rootView;
     }
 
@@ -48,5 +58,16 @@ public abstract class BaseFragment extends Fragment {
      */
     protected abstract int provideContentViewId();
 
+
+    /**
+     * 初始化视图控件
+     */
+    protected abstract void initView(View rootView, Bundle savedInstanceState);
+
+
+    /**
+     * 初始化Data
+     */
+    protected abstract void initData();
 
 }

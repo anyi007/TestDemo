@@ -226,9 +226,7 @@
                     android:id="@+id/Shop_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/px_10"
-                    android:text="商城效果"/>
-
+                    android:text="商城demo"/>
 
             </LinearLayout>
         </LinearLayout>

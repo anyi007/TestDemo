@@ -1,5 +1,8 @@
 package com.example.lql.testdemo.ui.fragment.shop;
 
+import android.os.Bundle;
+import android.view.View;
+
 import com.example.lql.testdemo.R;
 import com.example.lql.testdemo.ui.BaseFragment;
 
@@ -9,17 +12,17 @@ import com.example.lql.testdemo.ui.BaseFragment;
  * 时  间：2017/9/25
  * 修改备注：
  */
-public class HomeFragment extends BaseFragment {
+public class ShopHomeFragment extends BaseFragment {
 
-    public HomeFragment() {
+    public ShopHomeFragment() {
 
     }
 
-    private static HomeFragment mHomeFragment;
+    private static ShopHomeFragment mHomeFragment;
 
-    public static HomeFragment getInstance() {
+    public static ShopHomeFragment getInstance() {
         if (mHomeFragment == null) {
-            mHomeFragment = new HomeFragment();
+            mHomeFragment = new ShopHomeFragment();
         }
         return mHomeFragment;
     }
@@ -28,5 +31,15 @@ public class HomeFragment extends BaseFragment {
     @Override
     protected int provideContentViewId() {
         return R.layout.fragment_shop_main;
+    }
+
+    @Override
+    protected void initView(View rootView, Bundle savedInstanceState) {
+
+    }
+
+    @Override
+    protected void initData() {
+
     }
 }

@@ -25,6 +25,7 @@ import com.example.lql.testdemo.ui.activity.SideslipActivity;
 import com.example.lql.testdemo.ui.activity.SweetAlertDialogActivity;
 import com.example.lql.testdemo.ui.activity.TimingListActivity;
 import com.example.lql.testdemo.ui.activity.VideoListActivity;
+import com.example.lql.testdemo.ui.activity.shop.ShopMainActivity;
 import com.example.lql.testdemo.utils.chooseDateUtils.DateUtils;
 import com.example.lql.testdemo.utils.chooseDateUtils.OnoptionsUtils;
 import com.example.lql.testdemo.utils.pickerview.TimePopupWindow;
@@ -250,7 +251,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.Shop_button://商城的效果
-                startActivity(new Intent(MainActivity.this, EventBusActivity.class));
+                startActivity(new Intent(MainActivity.this, ShopMainActivity.class));
                 break;
 
         }

@@ -12,24 +12,24 @@ import com.example.lql.testdemo.ui.BaseFragment;
  * 时  间：2017/9/25
  * 修改备注：
  */
-public class ShopCartFragment extends BaseFragment {
-    public ShopCartFragment() {
+public class ShopClassFragment extends BaseFragment {
+    public ShopClassFragment() {
 
     }
 
-    private static ShopCartFragment mShopCartFragment;
+    private static ShopClassFragment mClassFragment;
 
-    public static ShopCartFragment getInstance() {
-        if (mShopCartFragment == null) {
-            mShopCartFragment = new ShopCartFragment();
+    public static ShopClassFragment getInstance() {
+        if (mClassFragment == null) {
+            mClassFragment = new ShopClassFragment();
         }
-        return mShopCartFragment;
+        return mClassFragment;
     }
 
 
     @Override
     protected int provideContentViewId() {
-        return R.layout.fragment_shop_cart;
+        return R.layout.fragment_shop_class;
     }
 
     @Override

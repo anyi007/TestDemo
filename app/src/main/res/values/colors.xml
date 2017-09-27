@@ -21,4 +21,10 @@
 
     <color name="background_tab_pressed">#8833B5E5</color>
 
+    <color name="shop_select1">#1296db</color>
+    <color name="shop_select2">#F97197</color>
+    <color name="shop_select3">#FE686A</color>
+    <color name="shop_select4">#51D8BA</color>
+
+    <color name="shop_unselect">#666</color>
 </resources>
