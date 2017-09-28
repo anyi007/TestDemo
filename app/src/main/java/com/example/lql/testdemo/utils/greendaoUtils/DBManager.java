@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import com.example.lql.testdemo.db.gen.DaoMaster;
 import com.example.lql.testdemo.db.gen.DaoSession;
 import com.example.lql.testdemo.utils.AppConstant;
+import com.example.lql.testdemo.utils.PublicStaticData;
 
 
 /**
@@ -49,6 +50,7 @@ public class DBManager {
             this.mContext = context;
             mOpenHelper = new DBOpenHelper(mContext, AppConstant.DATABASE_NAME, null);
             mDatabase = mOpenHelper.getWritableDatabase();
+            mOpenHelper.onUpgrade(mDatabase, PublicStaticData.OLDDBVERSION, mDatabase.getVersion());
             mDaoMaster = new DaoMaster(mDatabase);
             mDaoSession = mDaoMaster.newSession();
         }

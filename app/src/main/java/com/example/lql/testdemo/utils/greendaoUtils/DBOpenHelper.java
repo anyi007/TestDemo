@@ -2,9 +2,20 @@ package com.example.lql.testdemo.utils.greendaoUtils;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 
+import com.example.lql.testdemo.db.gen.AddressBeanDao;
+import com.example.lql.testdemo.db.gen.CollectionBeanDao;
+import com.example.lql.testdemo.db.gen.CommodityBeanDao;
+import com.example.lql.testdemo.db.gen.CommoditySizeBeanDao;
+import com.example.lql.testdemo.db.gen.CommodityTypeBeanDao;
 import com.example.lql.testdemo.db.gen.DaoMaster;
+import com.example.lql.testdemo.db.gen.EvaluateBeanDao;
+import com.example.lql.testdemo.db.gen.LogisticsBeanDao;
+import com.example.lql.testdemo.db.gen.NoticeBeanDao;
+import com.example.lql.testdemo.db.gen.OrderBeanDao;
+import com.example.lql.testdemo.db.gen.ShoppingCartBeanDao;
+import com.example.lql.testdemo.db.gen.TimingBeanDao;
+import com.example.lql.testdemo.db.gen.UserBeanDao;
 
 import org.greenrobot.greendao.database.Database;
 
@@ -30,17 +41,18 @@ public class DBOpenHelper extends DaoMaster.OpenHelper {
          * 循环数据库版本,更新各版本数据结构差异
          */
         if (newVersion > oldVersion) {
-            for (int i = oldVersion; i < newVersion; i++) {
-                try {
-                    BaseMigratorHelper migratorHelper = (BaseMigratorHelper) Class
-                            .forName("com.acmenxd.greendao3_demo.db.migrator.MigratorHelper" + (i + 1)).newInstance();
-                    if (migratorHelper != null) {
-                        migratorHelper.onUpgrade(db);
-                    }
-                } catch (ClassNotFoundException | ClassCastException | IllegalAccessException | InstantiationException pE) {
-                    Log.e("Dong", TAG + ":" + pE);
-                }
-            }
+            MigrationHelper.getInstance().migrate(db, AddressBeanDao.class);
+            MigrationHelper.getInstance().migrate(db, CollectionBeanDao.class);
+            MigrationHelper.getInstance().migrate(db, CommoditySizeBeanDao.class);
+            MigrationHelper.getInstance().migrate(db, CommodityTypeBeanDao.class);
+            MigrationHelper.getInstance().migrate(db, CommodityBeanDao.class);
+            MigrationHelper.getInstance().migrate(db, EvaluateBeanDao.class);
+            MigrationHelper.getInstance().migrate(db, LogisticsBeanDao.class);
+            MigrationHelper.getInstance().migrate(db, NoticeBeanDao.class);
+            MigrationHelper.getInstance().migrate(db, OrderBeanDao.class);
+            MigrationHelper.getInstance().migrate(db, ShoppingCartBeanDao.class);
+            MigrationHelper.getInstance().migrate(db, TimingBeanDao.class);
+            MigrationHelper.getInstance().migrate(db, UserBeanDao.class);
         }
     }
 }

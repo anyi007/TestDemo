@@ -19,4 +19,5 @@ public class PublicStaticData {
     public static DateFormat dateformatHm = new SimpleDateFormat("HH:mm");//时间显示格式
     public static String downLoadUrl = "";//下载地址
     public static int selectId = 0;//bilibili的title  选中的是哪个
+    public static int OLDDBVERSION = 1;//上一个版本号
 }
