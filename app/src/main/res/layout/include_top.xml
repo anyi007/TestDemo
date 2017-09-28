@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/top_ly"
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/px_80"
+              android:background="@color/shop_select1"
+              android:orientation="horizontal"
+              android:paddingBottom="@dimen/px_10"
+              android:paddingTop="@dimen/px_10">
+
+    <LinearLayout
+        android:id="@+id/top_back_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="@dimen/px_30"
+        android:paddingRight="@dimen/px_15">
+
+        <ImageView
+            android:id="@+id/top_back_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_back"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/top_title_tv"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/color_fff"
+        android:textSize="@dimen/px_36"
+        tools:text="标题"/>
+
+
+    <LinearLayout
+        android:id="@+id/top_right_ly"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="@dimen/px_30"
+        android:paddingRight="@dimen/px_15">
+
+        <ImageView
+            android:id="@+id/top_add_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add_tit"
+            android:visibility="gone"/>
+
+
+        <TextView
+            android:id="@+id/top_save_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="@color/color_fff"
+            android:textSize="@dimen/px_30"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

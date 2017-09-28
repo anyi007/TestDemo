@@ -6,8 +6,11 @@ import com.example.lql.testdemo.R;
 import com.example.lql.testdemo.db.bean.shop.CommodityBean;
 import com.example.lql.testdemo.db.bean.shop.CommodityTypeBean;
 import com.example.lql.testdemo.db.bean.shop.NoticeBean;
+import com.example.lql.testdemo.db.bean.shop.UserBean;
+import com.example.lql.testdemo.utils.LogUtils;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 类描述：商城数据初始化
@@ -31,12 +34,21 @@ public class InitShopManager {
         OrderBeanManager.DeleteAll();
         ShoppingCartBeanManager.DeleteAll();
         UserBeanManager.DeleteAll();
-
+        LogUtils.Loge("删除成功");
 
         //============================添加数据======================================================
 
         //初始化用户
         UserBeanManager.AddUser();
+        List<UserBean> userBeen = UserBeanManager.LoadAll();
+        if (userBeen != null) {
+            LogUtils.Loge("初始化用户成功");
+            for (int i = 0; i < userBeen.size(); i++) {
+                LogUtils.Loge("用户：" + i + ":" + userBeen.get(i).toString());
+            }
+        } else {
+            LogUtils.Loge("初始化用户失败");
+        }
 
         //初始化公告
         ArrayList<String> NoticNameList = new ArrayList<>();
@@ -81,6 +93,15 @@ public class InitShopManager {
             NoticeBeanManager.AddNotice(mNoticeBean);
         }
 
+        List<NoticeBean> noticeBeen = NoticeBeanManager.LoadAll();
+        if (noticeBeen != null) {
+            LogUtils.Loge("初始化公告成功");
+            for (int i = 0; i < noticeBeen.size(); i++) {
+                LogUtils.Loge("公告：" + i + ":" + noticeBeen.get(i).toString());
+            }
+        } else {
+            LogUtils.Loge("初始化公告失败");
+        }
 
         //初始化商品分类
         ArrayList<String> CommodityTypeNameList = new ArrayList<>();
@@ -90,7 +111,7 @@ public class InitShopManager {
 
         CommodityTypeNameList.add("女鞋");
         CommodityTypeNameList.add("箱包手袋");
-        CommodityTypeNameList.add("国际名牌");
+
 
         CommodityTypeNameList.add("美妆个护");
         CommodityTypeNameList.add("钟表珠宝");
@@ -106,17 +127,23 @@ public class InitShopManager {
 
         CommodityTypeNameList.add("医药保健");
         CommodityTypeNameList.add("户外运动");
-        CommodityTypeNameList.add("汽车用品");
 
-        CommodityTypeNameList.add("宠物生活");
-        CommodityTypeNameList.add("家具厨具");
-        CommodityTypeNameList.add("家具家装");
 
         for (int i = 0; i < CommodityTypeNameList.size(); i++) {
             CommodityTypeBean commodityTypeBean = new CommodityTypeBean();
             commodityTypeBean.setCommodityTypeId(null);
             commodityTypeBean.setCommodityTypeName(CommodityTypeNameList.get(i));
             CommodityTypeBeanManager.AddCommodityType(commodityTypeBean);
+        }
+
+        List<CommodityTypeBean> commodityTypeBeen = CommodityTypeBeanManager.LoadAll();
+        if (commodityTypeBeen != null) {
+            LogUtils.Loge("初始化商品分类成功");
+            for (int i = 0; i < commodityTypeBeen.size(); i++) {
+                LogUtils.Loge("商品分类：" + i + ":" + commodityTypeBeen.get(i).toString());
+            }
+        } else {
+            LogUtils.Loge("初始化商品分类失败");
         }
 
 
@@ -143,8 +170,6 @@ public class InitShopManager {
 
         CommodityTypeIdList.add(CommodityTypeBeanManager.LoadId("医药保健"));
         CommodityTypeIdList.add(CommodityTypeBeanManager.LoadId("户外运动"));
-
-
 
 
         //男装系类
@@ -180,9 +205,18 @@ public class InitShopManager {
         //户外运动
         addCommodity16();
 
+        LogUtils.Loge("初始化商品成功");
 
+        List<CommodityBean> commodityBeen = CommodityBeanManager.LoadAll();
+        if (commodityBeen != null) {
+            LogUtils.Loge("初始化商品成功");
+            for (int i = 0; i < commodityBeen.size(); i++) {
+                LogUtils.Loge("商品：" + i + ":" + commodityBeen.get(i).toString());
+            }
+        } else {
+            LogUtils.Loge("初始化商品失败");
+        }
     }
-
 
 
     //户外运动

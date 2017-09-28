@@ -56,13 +56,13 @@ public class ShopMainActivity extends AppCompatActivity {
                         switchFragment(1);
                         break;
                     case R.id.menu_cart:
-                        bottomnavigation.setItemBackgroundResource(R.color.shop_select4);
-                        MyStatusBarUtil.setStatusColor(ShopMainActivity.this, getResources().getColor(R.color.shop_select4));
+                        bottomnavigation.setItemBackgroundResource(R.color.shop_select3);
+                        MyStatusBarUtil.setStatusColor(ShopMainActivity.this, getResources().getColor(R.color.shop_select3));
                         switchFragment(2);
                         break;
                     case R.id.menu_mine:
-                        bottomnavigation.setItemBackgroundResource(R.color.shop_select3);
-                        MyStatusBarUtil.setStatusColor(ShopMainActivity.this, getResources().getColor(R.color.shop_select3));
+                        bottomnavigation.setItemBackgroundResource(R.color.shop_select4);
+                        MyStatusBarUtil.setStatusColor(ShopMainActivity.this, getResources().getColor(R.color.shop_select4));
                         switchFragment(3);
                         break;
                 }

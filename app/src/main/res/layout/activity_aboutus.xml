@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/window_background"
+              android:orientation="vertical">
+
+
+    <include layout="@layout/include_top"></include>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/bg_guanyuwomen"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_20"
+                android:paddingLeft="@dimen/px_24"
+                android:paddingRight="@dimen/px_24"
+                android:text="这是什么？"
+                android:textColor="@color/color_333"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_10"
+                android:paddingLeft="@dimen/px_24"
+                android:paddingRight="@dimen/px_24"
+                android:text="这是一个商城效果的demo，分为首页热门商品、商品分类、购物车、个人中心模块。数据存储使用GreenDao，数据中初始化了一个User。"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_20"
+                android:paddingLeft="@dimen/px_24"
+                android:paddingRight="@dimen/px_24"
+                android:text="作者：李小米  QQ：531192557"
+                android:textColor="@color/color_333"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_20"
+                android:paddingLeft="@dimen/px_24"
+                android:paddingRight="@dimen/px_24"
+                android:text="个人主页"
+                android:textColor="@color/color_333"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_10"
+                android:paddingLeft="@dimen/px_24"
+                android:paddingRight="@dimen/px_24"
+                android:text="github    https://github.com/LiQinglin007"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_5"
+                android:paddingLeft="@dimen/px_24"
+                android:paddingRight="@dimen/px_24"
+                android:text="简书       http://www.jianshu.com/u/1452ccbf6187"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_5"
+                android:paddingLeft="@dimen/px_24"
+                android:paddingRight="@dimen/px_24"
+                android:text="csdn       http://blog.csdn.net/qq_15037349"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

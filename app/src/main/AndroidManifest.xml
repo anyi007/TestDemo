@@ -161,13 +161,23 @@
         </activity>
 
 
-
+        <!--*************************************************************商城模块demo**********************************************************************-->
         <activity
             android:name=".ui.activity.shop.ShopMainActivity"
             android:label="@string/title_activity_ShopMainActivity"
             android:theme="@style/AppTheme.BilibiliNoActionBar1"
             >
         </activity>
+
+        <!--关于我们-->
+        <activity
+            android:name=".ui.activity.shop.AboutUsActivity"
+            android:theme="@style/AppTheme.BilibiliNoActionBar1"
+            >
+        </activity>
+
+
+
 
     </application>
 

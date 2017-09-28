@@ -4,6 +4,8 @@ import com.example.lql.testdemo.db.bean.shop.UserBean;
 import com.example.lql.testdemo.db.gen.UserBeanDao;
 import com.example.lql.testdemo.utils.greendaoUtils.DBManager;
 
+import java.util.List;
+
 /**
  * 类描述：商城模块--》用户管理
  * 作  者：Admin or 李小米
@@ -35,6 +37,16 @@ public class UserBeanManager {
         userBeanDao.insert(mUserBean);
     }
 
+    /**
+     * 获取userBean
+     *
+     * @return
+     */
+    public static UserBean getUserBean() {
+        getUserBeanDao();
+        return userBeanDao.queryBuilder().where(UserBeanDao.Properties.UserName.eq("小米")).unique();
+    }
+
 
     /**
      * 充值
@@ -56,6 +68,11 @@ public class UserBeanManager {
     public static void DeleteAll() {
         getUserBeanDao();
         userBeanDao.deleteAll();
+    }
+
+    public static List<UserBean> LoadAll() {
+        getUserBeanDao();
+        return userBeanDao.loadAll();
     }
 
 
