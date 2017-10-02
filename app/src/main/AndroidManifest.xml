@@ -176,7 +176,19 @@
             >
         </activity>
 
+        <!--公告list页面-->
+        <activity
+            android:name=".ui.activity.shop.NoticeListActivity"
+            android:theme="@style/AppTheme.BilibiliNoActionBar1"
+            >
+        </activity>
 
+        <!--公告详情页面-->
+        <activity
+            android:name=".ui.activity.shop.NoticeActivity"
+            android:theme="@style/AppTheme.BilibiliNoActionBar1"
+            >
+        </activity>
 
 
     </application>

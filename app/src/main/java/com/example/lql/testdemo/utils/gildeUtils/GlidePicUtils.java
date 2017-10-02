@@ -39,8 +39,8 @@ public class GlidePicUtils {
             GlideApp.with(mContext)
                     .asBitmap()
                     .load(url)
-                    .error(R.mipmap.ic_launcher_round)
-                    .placeholder(R.mipmap.ic_launcher_round)
+                    .error(R.drawable.errorpic)
+                    .placeholder(R.drawable.errorpic)
                     .fallback(R.drawable.test)//当url为空时，显示图片
                     .into(imageView);
         } else {
@@ -58,8 +58,8 @@ public class GlidePicUtils {
         GlideApp.with(mContext)
                 .asBitmap()
                 .load(bitmap)
-                .error(R.mipmap.ic_launcher_round)
-                .placeholder(R.mipmap.ic_launcher_round)
+                .error(R.drawable.errorpic)
+                .placeholder(R.drawable.errorpic)
                 .fallback(R.drawable.test)//当url为空时，显示图片
                 .into(imageView);
     }
@@ -147,8 +147,8 @@ public class GlidePicUtils {
                 .asBitmap()//指定Bitmap类型的RequestBuilder
                 .load(url)//网络URL
                 .diskCacheStrategy(DiskCacheStrategy.ALL)//缓存策略
-                .error(R.mipmap.ic_launcher_round)
-                .placeholder(R.mipmap.ic_launcher_round)
+                .error(R.drawable.errorpic)
+                .placeholder(R.drawable.errorpic)
                 .fallback(R.drawable.test);//当url为空时，显示图片
         return bitmapRequestBuilder;
     }

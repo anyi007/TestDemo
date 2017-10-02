@@ -146,8 +146,8 @@ public class SideslipActivity extends BaseActivity {
         SwipeMenuItem openItem = new SwipeMenuItem(
                 getApplicationContext());
         // set item background
-        openItem.setBackground(new ColorDrawable(Color.rgb(0xC9, 0xC9,
-                0xCE)));
+        openItem.setBackground(new ColorDrawable(Color.rgb(0x102, 0x232,
+                0x214)));
         // set item width
         openItem.setWidth(dp2px(90));
         // set item title
@@ -162,8 +162,8 @@ public class SideslipActivity extends BaseActivity {
         // create "delete" item
         SwipeMenuItem deleteItem = new SwipeMenuItem(
                 getApplicationContext());
-        deleteItem.setBackground(new ColorDrawable(Color.rgb(0xF9,
-                0x3F, 0x25)));
+        deleteItem.setBackground(new ColorDrawable(Color.rgb(0x254,
+                0x60, 0x46)));
         deleteItem.setWidth(dp2px(90));
         deleteItem.setTitle("删除");
         menu.addMenuItem(deleteItem);

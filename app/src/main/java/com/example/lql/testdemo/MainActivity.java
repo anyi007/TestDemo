@@ -163,6 +163,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.ShopButton = (Button) findViewById(R.id.Shop_button);
         this.ShopButton.setOnClickListener(this);
 
+
     }
 
     @Override
@@ -253,6 +254,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.Shop_button://商城的效果
                 startActivity(new Intent(MainActivity.this, ShopMainActivity.class));
                 break;
+
 
         }
     }

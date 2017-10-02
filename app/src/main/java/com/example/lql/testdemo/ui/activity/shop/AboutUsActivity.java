@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -22,8 +21,7 @@ public class AboutUsActivity extends AppCompatActivity {
     private LinearLayout back_ly;//返回按钮
     private TextView title_tv;//标题
     private LinearLayout title_save_ly;//保存按钮
-    private TextView title_save_tv;//右侧文字
-    private ImageView title_add_img;//右侧图标
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -35,8 +33,7 @@ public class AboutUsActivity extends AppCompatActivity {
         back_ly = (LinearLayout) findViewById(R.id.top_back_ly);
         title_save_ly = (LinearLayout) findViewById(R.id.top_right_ly);
         title_tv = (TextView) findViewById(R.id.top_title_tv);
-        title_add_img = (ImageView) findViewById(R.id.top_add_img);
-        title_save_tv = (TextView) findViewById(R.id.top_save_tv);
+
         title_tv.setText("About This");
         title_save_ly.setVisibility(View.INVISIBLE);
 
