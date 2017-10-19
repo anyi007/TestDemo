@@ -31,4 +31,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/px_20"
         android:text="跳转回去，传递消息4"/>
+
+
+    <TextView
+        android:id="@+id/getmessage_tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_20"
+        android:text="收到的消息"/>
 </LinearLayout>

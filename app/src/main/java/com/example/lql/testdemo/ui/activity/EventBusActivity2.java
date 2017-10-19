@@ -5,14 +5,19 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.lql.testdemo.R;
+import com.example.lql.testdemo.eventBus.FiveMessage;
 import com.example.lql.testdemo.eventBus.FourthMessage;
 import com.example.lql.testdemo.eventBus.MessageEvent;
 import com.example.lql.testdemo.eventBus.SecondMessage;
 import com.example.lql.testdemo.eventBus.ThirdMessage;
+import com.example.lql.testdemo.utils.LogUtils;
 
 import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 /**
  * 类描述：事件总线
@@ -41,13 +46,14 @@ public class EventBusActivity2 extends AppCompatActivity implements View.OnClick
     Button test_button2;
     Button test_button3;
     Button test_button4;
+    TextView getMessageTv;
 
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_eventbus2);
-
+        EventBus.getDefault().register(this);
         initView();
     }
 
@@ -56,6 +62,7 @@ public class EventBusActivity2 extends AppCompatActivity implements View.OnClick
         test_button2 = (Button) findViewById(R.id.test_button2);
         test_button3 = (Button) findViewById(R.id.test_button3);
         test_button4 = (Button) findViewById(R.id.test_button4);
+        getMessageTv = (TextView) findViewById(R.id.getmessage_tv1);
 
         test_button1.setOnClickListener(this);
         test_button2.setOnClickListener(this);
@@ -87,4 +94,26 @@ public class EventBusActivity2 extends AppCompatActivity implements View.OnClick
                 break;
         }
     }
+
+
+    /**
+     * sticky设置接收粘性消息
+     *
+     * @param message
+     */
+    @Subscribe(threadMode = ThreadMode.MAIN, sticky = true)
+    public void ThirdEvent(FiveMessage message) {
+        LogUtils.Loge("粘性消息123");
+        getMessageTv = (TextView) findViewById(R.id.getmessage_tv1);
+        getMessageTv.setText("第一个页面传递过来的：" + message.getMessage() + "粘性消息");
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
 }
+
+

@@ -8,7 +8,16 @@
         android:id="@+id/test_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="跳转到第二个页面,发送事件"/>
+        android:text="跳转到第二个页面,去发送事件"/>
+
+
+
+    <Button
+        android:layout_marginTop="@dimen/px_20"
+        android:id="@+id/test_send_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转到第二个页面,发送粘性事件"/>
 
 
     <TextView

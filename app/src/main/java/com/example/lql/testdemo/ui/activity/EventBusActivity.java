@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.lql.testdemo.R;
+import com.example.lql.testdemo.eventBus.FiveMessage;
 import com.example.lql.testdemo.eventBus.FourthMessage;
 import com.example.lql.testdemo.eventBus.MessageEvent;
 import com.example.lql.testdemo.eventBus.SecondMessage;
@@ -18,6 +19,7 @@ import com.example.lql.testdemo.utils.LogUtils;
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
+
 
 /**
  * 类描述：事件总线
@@ -46,11 +48,15 @@ import org.greenrobot.eventbus.ThreadMode;
  * 不能把消息传递到一个新的activity里边或者fragment中
  * <p>
  * 2、设置消息拦截：POSTING只有在默认状态下才能拦截消息，优先级高的可以拦截，阻止消息继续向下传递
+ * <p>
+ * 3、粘性消息只能传递一个String类型的消息，所谓粘性消息，是说给一个还没有创建出来的页面（activity/fragment）post消息的时候，那个页面是也收不到的，
+ * 当那个页面创建出来了，就能在第一时间接收到消息。这样就能替代intent传值了。
  */
 
 public class EventBusActivity extends AppCompatActivity {
 
     Button test_button;
+    Button test_Sendbutton;
     TextView test_tv;
 
     @Override
@@ -64,10 +70,19 @@ public class EventBusActivity extends AppCompatActivity {
 
     private void initView() {
         test_button = (Button) findViewById(R.id.test_button);
+        test_Sendbutton = (Button) findViewById(R.id.test_send_button);
         test_tv = (TextView) findViewById(R.id.test_tv1);
         test_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(EventBusActivity.this, EventBusActivity2.class));
+            }
+        });
+
+        test_Sendbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                EventBus.getDefault().postSticky(new FiveMessage("粘性消息测试"));
                 startActivity(new Intent(EventBusActivity.this, EventBusActivity2.class));
             }
         });
