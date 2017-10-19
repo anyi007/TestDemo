@@ -27,6 +27,7 @@ public class ShoppingCartBeanDao extends AbstractDao<ShoppingCartBean, Void> {
         public final static Property UserId = new Property(0, Long.class, "UserId", false, "USER_ID");
         public final static Property Number = new Property(1, Integer.class, "Number", false, "NUMBER");
         public final static Property CommodityId = new Property(2, Long.class, "CommodityId", false, "COMMODITY_ID");
+        public final static Property CommoditySizeId = new Property(3, Long.class, "CommoditySizeId", false, "COMMODITY_SIZE_ID");
     };
 
 
@@ -44,7 +45,8 @@ public class ShoppingCartBeanDao extends AbstractDao<ShoppingCartBean, Void> {
         db.execSQL("CREATE TABLE " + constraint + "\"SHOPPING_CART_BEAN\" (" + //
                 "\"USER_ID\" INTEGER," + // 0: UserId
                 "\"NUMBER\" INTEGER," + // 1: Number
-                "\"COMMODITY_ID\" INTEGER);"); // 2: CommodityId
+                "\"COMMODITY_ID\" INTEGER," + // 2: CommodityId
+                "\"COMMODITY_SIZE_ID\" INTEGER);"); // 3: CommoditySizeId
     }
 
     /** Drops the underlying database table. */
@@ -71,6 +73,11 @@ public class ShoppingCartBeanDao extends AbstractDao<ShoppingCartBean, Void> {
         if (CommodityId != null) {
             stmt.bindLong(3, CommodityId);
         }
+ 
+        Long CommoditySizeId = entity.getCommoditySizeId();
+        if (CommoditySizeId != null) {
+            stmt.bindLong(4, CommoditySizeId);
+        }
     }
 
     @Override
@@ -91,6 +98,11 @@ public class ShoppingCartBeanDao extends AbstractDao<ShoppingCartBean, Void> {
         if (CommodityId != null) {
             stmt.bindLong(3, CommodityId);
         }
+ 
+        Long CommoditySizeId = entity.getCommoditySizeId();
+        if (CommoditySizeId != null) {
+            stmt.bindLong(4, CommoditySizeId);
+        }
     }
 
     @Override
@@ -103,7 +115,8 @@ public class ShoppingCartBeanDao extends AbstractDao<ShoppingCartBean, Void> {
         ShoppingCartBean entity = new ShoppingCartBean( //
             cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // UserId
             cursor.isNull(offset + 1) ? null : cursor.getInt(offset + 1), // Number
-            cursor.isNull(offset + 2) ? null : cursor.getLong(offset + 2) // CommodityId
+            cursor.isNull(offset + 2) ? null : cursor.getLong(offset + 2), // CommodityId
+            cursor.isNull(offset + 3) ? null : cursor.getLong(offset + 3) // CommoditySizeId
         );
         return entity;
     }
@@ -113,6 +126,7 @@ public class ShoppingCartBeanDao extends AbstractDao<ShoppingCartBean, Void> {
         entity.setUserId(cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0));
         entity.setNumber(cursor.isNull(offset + 1) ? null : cursor.getInt(offset + 1));
         entity.setCommodityId(cursor.isNull(offset + 2) ? null : cursor.getLong(offset + 2));
+        entity.setCommoditySizeId(cursor.isNull(offset + 3) ? null : cursor.getLong(offset + 3));
      }
     
     @Override

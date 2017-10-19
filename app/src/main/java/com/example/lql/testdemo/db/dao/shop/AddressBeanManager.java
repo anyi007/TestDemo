@@ -17,7 +17,7 @@ public class AddressBeanManager {
     private static AddressBeanDao addressBeanDao;
 
 
-    private static  AddressBeanDao getAddressBeanDao(){
+    private static AddressBeanDao getAddressBeanDao() {
         if (addressBeanDao == null) {
             addressBeanDao = DBManager.getInstance().getDaoSession().getAddressBeanDao();
         }
@@ -68,13 +68,10 @@ public class AddressBeanManager {
      * @return 该用户的全部地址
      */
     public static List<AddressBean> LoadAllByUserId(Long UserId) {
-
         getAddressBeanDao();
-
         List<AddressBean> list = addressBeanDao.queryBuilder().
                 where(AddressBeanDao.Properties.UserId.eq(UserId)).
                 list();
-
         return list;
     }
 
@@ -97,7 +94,6 @@ public class AddressBeanManager {
         getAddressBeanDao();
         addressBeanDao.deleteAll();
     }
-
 
 
 }

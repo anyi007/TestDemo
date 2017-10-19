@@ -79,8 +79,6 @@ public class PopupUtils {
                 LogUtils.Loge("点击了第" + position + "个");
                 if (mpopupCallBack != null) {
                     ListIndex = position;
-
-                    LogUtils.Loge("点击了a第" + position + "个");
                     mpopupCallBack.PopupCallBack(position);
                     popupWindow.dismiss();
                 }
@@ -97,26 +95,21 @@ public class PopupUtils {
         switch (windowLoaction) {
             //在屏幕中央
             case CENTER:
-
                 //设置宽度
                 popupWindow.setWidth(ScreenUtils.getScreenWidth(mActivity) / 3);
-
 //                //设置高度
                 if (mList.size() < 7) {
                     popupWindow.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
                 } else {
                     popupWindow.setHeight(ScreenUtils.getScreenHeight(mActivity) / 3);
                 }
-
-                //设置高度
+                //设置位置
                 popupWindow.showAtLocation(parent, Gravity.CENTER, 0, 0);
                 break;
             //在屏幕底部
             case BOTTOM:
-
                 //设置宽度
                 popupWindow.setWidth(ScreenUtils.getScreenWidth(mActivity));
-
 //                //设置高度
                 if (mList.size() > 3) {
                     popupWindow.setHeight(ScreenUtils.getScreenHeight(mActivity) / 3);
@@ -127,17 +120,14 @@ public class PopupUtils {
                 break;
             //在控件下面
             case VIEW_BOTTOM:
-
                 //设置宽度
                 popupWindow.setWidth(ScreenUtils.getScreenWidth(mActivity) / 3);
-
                 //设置高度
                 if (mList.size() > 3) {
                     popupWindow.setHeight(ScreenUtils.getScreenHeight(mActivity) / 3);
                 } else {
                     popupWindow.setHeight(LinearLayout.LayoutParams.WRAP_CONTENT);
                 }
-
                 popupWindow.showAsDropDown(parent);
                 break;
         }

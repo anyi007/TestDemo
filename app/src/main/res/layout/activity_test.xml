@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+    <com.example.lql.testdemo.utils.commodityLoadMore.MyScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/testactivity_btu1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="改变第一个textview的大小"/>
+
+            <TextView
+                android:id="@+id/testactivity_tv1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_300"
+                android:text="text1"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_300"
+                android:text="text2"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_300"
+                android:text="text3"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_300"
+                android:text="text4"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_300"
+                android:text="text5"/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_300"
+                android:background="@color/background_tab_pressed"
+                android:gravity="bottom|center_horizontal"
+                android:paddingBottom="@dimen/px_20"
+                android:text="这里是底部"
+                android:textColor="@color/color_fff"/>
+
+
+        </LinearLayout>
+
+
+    </com.example.lql.testdemo.utils.commodityLoadMore.MyScrollView>
+
+
+</LinearLayout>

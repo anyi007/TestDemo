@@ -1,9 +1,12 @@
 package com.example.lql.testdemo.ui.fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.lql.testdemo.R;
 import com.example.lql.testdemo.ui.BaseFragment;
@@ -12,7 +15,8 @@ import com.example.lql.testdemo.ui.BaseFragment;
  * A simple {@link Fragment} subclass.
  */
 public class TwoFragment extends BaseFragment {
-
+    ImageView mImageView;
+    Button mButton;
 
     public TwoFragment() {
         // Required empty public constructor
@@ -26,7 +30,6 @@ public class TwoFragment extends BaseFragment {
         }
         return twoFragment;
     }
-
 
 
     @Override
@@ -44,4 +47,9 @@ public class TwoFragment extends BaseFragment {
 
     }
 
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 }

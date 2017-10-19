@@ -7,17 +7,17 @@ package com.example.lql.testdemo.eventBus;
  * 修改备注：
  */
 public class ShopClassIdMessage {
-    private long classTypeId;
+    private String classTypeId;
 
-    public ShopClassIdMessage(long classTypeId) {
+    public ShopClassIdMessage(String classTypeId) {
         this.classTypeId = classTypeId;
     }
 
-    public long getMessage() {
+    public String getMessage() {
         return classTypeId;
     }
 
-    public void setMessage(long message) {
+    public void setMessage(String message) {
         this.classTypeId = message;
     }
 }

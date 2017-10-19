@@ -28,6 +28,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/color_fff"
         android:gravity="center_horizontal"
         android:paddingBottom="@dimen/px_15"
         android:paddingTop="@dimen/px_15"

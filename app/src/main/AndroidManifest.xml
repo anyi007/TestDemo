@@ -18,9 +18,8 @@
     <application
         android:name=".application.MyApplication"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher_round"
+        android:icon="@mipmap/logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:icon,android:theme">
@@ -45,14 +44,11 @@
         </activity>
 
         <!--<activity android:name=".TestActivity">-->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN"/>-->
-                <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-            <!--</intent-filter>-->
+        <!--<intent-filter>-->
+        <!--<action android:name="android.intent.action.MAIN"/>-->
+        <!--<category android:name="android.intent.category.LAUNCHER"/>-->
+        <!--</intent-filter>-->
         <!--</activity>-->
-
-
-
 
 
         <activity
@@ -198,6 +194,13 @@
         <!--公告详情页面-->
         <activity
             android:name=".ui.activity.shop.NoticeActivity"
+            android:theme="@style/AppTheme.BilibiliNoActionBar1"
+            >
+        </activity>
+
+        <!--商品详情页面-->
+        <activity
+            android:name=".ui.activity.shop.CommodityDetailsActivity"
             android:theme="@style/AppTheme.BilibiliNoActionBar1"
             >
         </activity>
