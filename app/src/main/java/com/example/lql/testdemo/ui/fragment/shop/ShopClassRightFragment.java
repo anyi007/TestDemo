@@ -1,5 +1,6 @@
 package com.example.lql.testdemo.ui.fragment.shop;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +12,7 @@ import com.example.lql.testdemo.db.bean.shop.CommodityBean;
 import com.example.lql.testdemo.db.dao.shop.CommodityBeanManager;
 import com.example.lql.testdemo.eventBus.ShopClassIdMessage;
 import com.example.lql.testdemo.ui.BaseFragment;
+import com.example.lql.testdemo.ui.activity.shop.CommodityDetailsActivity;
 import com.example.lql.testdemo.utils.LogUtils;
 import com.example.lql.testdemo.utils.RecyclerView.OnItemClickListener;
 
@@ -68,7 +70,9 @@ public class ShopClassRightFragment extends BaseFragment {
         mShopClassFragmentRightAdapter.setOnItemClickListener(new OnItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-
+                Intent mIntent = new Intent(getActivity(), CommodityDetailsActivity.class);
+                mIntent.putExtra("commodityId",mCommodityBeanArrayList.get(position).getCommodityId());
+                startActivity(mIntent);
             }
         });
     }

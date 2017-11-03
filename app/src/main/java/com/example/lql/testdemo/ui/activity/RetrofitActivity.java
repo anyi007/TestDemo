@@ -228,12 +228,12 @@ public class RetrofitActivity extends AppCompatActivity implements View.OnClickL
             @Override
             public void onResponse(Call<String> call, Response<String> response) {
                 Log.e("===", "return:" + response.body().toString());
-                LogUtils.Loge(response.body().toString());
+                LogUtils.Loge(response.body().toString()+"onResponse");
             }
 
             @Override
             public void onFailure(Call<String> call, Throwable t) {
-                LogUtils.Loge(t.toString());
+                LogUtils.Loge(t.toString()+"onFailure");
             }
         });
 

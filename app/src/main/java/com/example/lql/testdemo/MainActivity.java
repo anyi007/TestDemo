@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.lql.testdemo.eventBus.ExitappMessage;
 import com.example.lql.testdemo.ui.activity.BigPicActivity;
 import com.example.lql.testdemo.ui.activity.BilibiliActivity;
 import com.example.lql.testdemo.ui.activity.CoordinatorLayoutActivity;
@@ -26,9 +27,14 @@ import com.example.lql.testdemo.ui.activity.SweetAlertDialogActivity;
 import com.example.lql.testdemo.ui.activity.TimingListActivity;
 import com.example.lql.testdemo.ui.activity.VideoListActivity;
 import com.example.lql.testdemo.ui.activity.shop.ShopMainActivity;
+import com.example.lql.testdemo.utils.T;
 import com.example.lql.testdemo.utils.chooseDateUtils.DateUtils;
 import com.example.lql.testdemo.utils.chooseDateUtils.OnoptionsUtils;
 import com.example.lql.testdemo.utils.pickerview.TimePopupWindow;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 import java.util.Date;
 
@@ -64,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private android.widget.Button RecyclerviewButton;
     private android.widget.Button EventBusButton;
     private android.widget.Button ShopButton;
+    private android.widget.Button GuideButton;
 
 
 //    MoveImageview mImageView;
@@ -72,6 +79,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //        //注册事件
+        EventBus.getDefault().register(this);
         initView();
     }
 
@@ -162,6 +171,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //商城的效果
         this.ShopButton = (Button) findViewById(R.id.Shop_button);
         this.ShopButton.setOnClickListener(this);
+
+
+        //新手引导
+        this.GuideButton = (Button) findViewById(R.id.guide_button);
+        this.GuideButton.setOnClickListener(this);
 
 
     }
@@ -255,6 +269,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this, ShopMainActivity.class));
                 break;
 
+            case R.id.guide_button://新手引导
+                startActivity(new Intent(MainActivity.this, ShopMainActivity.class));
+                break;
+
 
         }
     }
@@ -275,5 +293,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return true;
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onExitappEvent(ExitappMessage messageEvent) {
+        T.shortToast(MainActivity.this, "这里去处理退出app");
+    }
+
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        //取消注册事件
+        EventBus.getDefault().unregister(this);
     }
 }

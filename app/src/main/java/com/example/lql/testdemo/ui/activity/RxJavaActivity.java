@@ -304,13 +304,13 @@ public class RxJavaActivity extends AppCompatActivity implements View.OnClickLis
                 }
 
                 Observable<String> observable = Observable.create(new OnSubscribe<String>() {
-                    @Override
-                    public void call(Subscriber<? super String> subscriber) {
-                        subscriber.onNext("我好了");
-                    }
-                })
-                        .subscribeOn(Schedulers.io())//指定被观察者在子线程中
-                        .observeOn(AndroidSchedulers.mainThread());//指观察者在主线程中
+                @Override
+                public void call(Subscriber<? super String> subscriber) {
+                    subscriber.onNext("我好了");
+                }
+            })
+                    .subscribeOn(Schedulers.io())//指定被观察者在子线程中
+                    .observeOn(AndroidSchedulers.mainThread());//指观察者在主线程中
 
                 observable.subscribe(subscriber);
             }

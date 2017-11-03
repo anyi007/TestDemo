@@ -30,6 +30,7 @@
 
     <!--选择规格-->
     <TextView
+        android:id="@+id/commodity_top_size_top"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/px_20"
@@ -205,4 +206,33 @@
     </android.support.v7.widget.RecyclerView>
 
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingTop="@dimen/px_20"
+        android:paddingBottom="@dimen/px_20"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <View
+            android:background="@color/color_e0e0e0"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/px_2"></View>
+
+        <TextView
+            android:text="继续拖动，查看图文详情"
+            android:paddingLeft="@dimen/px_10"
+            android:paddingRight="@dimen/px_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:background="@color/color_e0e0e0"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="@dimen/px_2"></View>
+
+    </LinearLayout>
 </LinearLayout>

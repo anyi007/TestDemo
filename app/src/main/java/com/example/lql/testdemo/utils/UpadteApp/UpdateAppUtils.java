@@ -23,7 +23,7 @@ import com.example.lql.testdemo.utils.T;
  * 逻辑关系说明：
  *         1、请求数据  拿到后台的apk的版本号、版本名、更新内容、下载地址（可能还会包括是否强制更新的标志位）
  *         2、和本地的apk版本号对比时候需要更新
- *         3、这里用户可能会忽略此版本，这时候我要存储一个版本号，用户忽略的版本号
+ *         3、这里用户可能会忽略此版本，这时候我要存储一个版本号，用户忽略的版本号，如果用户的是主动更新的，都要提示。如果不是主动更新的判断一下，判断一下。
  *         4、在步骤2以后   如果需要更新，先判断步骤3里边存储的版本号，比较大小，
  *              如果用户忽略更新这个版本，那就不更新了；如果用户没有忽略过此版本，继续往下
  *         5、这时候给用户一个提示，展示内容是有新版本是否更新，更新内容
@@ -70,7 +70,7 @@ public class UpdateAppUtils {
         }
 
         if(versionCode<newVersionCode){//第2步骤
-            if(PreferenceUtils.getInt(FinalData.VERSIONCODE,0)<newVersionCode){//第3步骤
+            if(PreferenceUtils.getInt(FinalData.VERSIONCODE,0)<newVersionCode||IsToast){//第3步骤
                 //这时候要去更新，展示下载的对话框
                 showDownLoadDialog(newVersionName,newVersionCode,content,downUrl,IsUpdate);
             }

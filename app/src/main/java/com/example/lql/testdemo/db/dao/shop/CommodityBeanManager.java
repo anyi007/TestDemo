@@ -35,6 +35,17 @@ public class CommodityBeanManager {
 
 
     /**
+     * 查询某个商品详情
+     * @param id
+     * @return
+     */
+    public static CommodityBean getCommodityById(long id) {
+        getmCommodityBeanDao();
+        return mCommodityBeanDao.load(id);
+    }
+
+
+    /**
      * 查询全部商品
      */
     public static List<CommodityBean> LoadAll() {

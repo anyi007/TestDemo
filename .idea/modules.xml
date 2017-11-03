@@ -5,6 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/RecyclerviewCardGalleryLibrary/RecyclerviewCardGalleryLibrary.iml" filepath="$PROJECT_DIR$/RecyclerviewCardGalleryLibrary/RecyclerviewCardGalleryLibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/TestDemo.iml" filepath="$PROJECT_DIR$/TestDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/choosetime/choosetime.iml" filepath="$PROJECT_DIR$/choosetime/choosetime.iml" />
+      <module fileurl="file://$PROJECT_DIR$/shopdemo/shopdemo.iml" filepath="$PROJECT_DIR$/shopdemo/shopdemo.iml" />
     </modules>
   </component>
 </project>

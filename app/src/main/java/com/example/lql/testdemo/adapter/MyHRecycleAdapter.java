@@ -23,7 +23,7 @@ import java.util.ArrayList;
  */
 public class MyHRecycleAdapter extends RecyclerView.Adapter<MyHRecycleAdapter.ViewHolder> {
 
-    private ArrayList<String> mList;
+    private ArrayList<String> mList=new ArrayList<>();
     private Context mContext;
 
     public interface OnItemClickLitener {
@@ -36,10 +36,19 @@ public class MyHRecycleAdapter extends RecyclerView.Adapter<MyHRecycleAdapter.Vi
         mClick = mOnItemClickListener;
     }
 
-    public MyHRecycleAdapter(ArrayList<String> list, Context context) {
-        mList = list;
+    public MyHRecycleAdapter( Context context) {
+//        mList = list;
         mContext = context;
     }
+
+
+    public void setList(ArrayList<String> mListData) {
+        mList.clear();
+        mList.addAll(mListData);
+        notifyDataSetChanged();
+    }
+
+
 
     @Override
     public MyHRecycleAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {

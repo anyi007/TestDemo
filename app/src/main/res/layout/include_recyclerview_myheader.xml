@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/head_ly"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/px_60"
+    android:background="@color/shop_select2"
+    android:gravity="center_vertical"
+    android:text="我是头部"
+    android:textColor="@color/color_fff"/>
+
+

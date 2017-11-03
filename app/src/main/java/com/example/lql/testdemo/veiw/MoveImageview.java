@@ -82,8 +82,8 @@ public class MoveImageview extends ImageView {
                     top = bottom - getHeight();
                 }
                 LogUtils.Loge("left1:" + left + "top1:" + top + "right1:" + right + "bottom1:" + bottom);
-//                layout(left, top, right, bottom);
-                layout(300, 300, 300, 300);
+                layout(left, top, right, bottom);
+//                layout(300, 300, 300, 300);
 
 
                 lastX = (int) event.getRawX();

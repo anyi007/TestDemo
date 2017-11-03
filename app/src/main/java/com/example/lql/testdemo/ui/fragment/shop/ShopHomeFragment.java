@@ -15,10 +15,12 @@ import com.example.lql.testdemo.db.bean.shop.NoticeBean;
 import com.example.lql.testdemo.db.dao.shop.CommodityBeanManager;
 import com.example.lql.testdemo.db.dao.shop.NoticeBeanManager;
 import com.example.lql.testdemo.ui.BaseFragment;
+import com.example.lql.testdemo.ui.activity.shop.CommodityDetailsActivity;
 import com.example.lql.testdemo.ui.activity.shop.NoticeListActivity;
 import com.example.lql.testdemo.utils.LogUtils;
 import com.example.lql.testdemo.utils.gildeUtils.GlidePicUtils;
 import com.example.lql.testdemo.veiw.SwitchViewGroup;
+import com.github.jdsjlzx.interfaces.OnItemClickListener;
 import com.github.jdsjlzx.recyclerview.LRecyclerView;
 import com.github.jdsjlzx.recyclerview.LRecyclerViewAdapter;
 
@@ -90,6 +92,16 @@ public class ShopHomeFragment extends BaseFragment {
         getHotData();
         getNotic();
         getBagData();
+
+
+        mLRecyclerViewAdapter.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent mIntent = new Intent(getActivity(), CommodityDetailsActivity.class);
+                mIntent.putExtra("commodityId", mCommodityBeanArrayList.get(position).getCommodityId());
+                startActivity(mIntent);
+            }
+        });
     }
 
 

@@ -1,6 +1,7 @@
 package com.example.lql.testdemo.http;
 
 import android.os.Handler;
+import android.os.Looper;
 
 import java.io.IOException;
 
@@ -16,7 +17,7 @@ import okhttp3.Response;
 */
 
 public abstract class MOkCallBack implements Callback {
-   Handler handler = new Handler();
+    Handler handler = new Handler(Looper.getMainLooper());
    @Override
    public void onFailure(Call call, final IOException e) {
        handler.post(new Runnable() {
