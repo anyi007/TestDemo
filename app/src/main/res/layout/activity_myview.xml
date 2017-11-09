@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:background="@color/black_semi_transparent"
+              android:layout_height="match_parent">
+
+    <com.example.lql.testdemo.veiw.MoveImageview
+        android:id="@+id/myview_move"
+        android:layout_width="@dimen/px_120"
+        android:layout_height="@dimen/px_120"
+        android:src="@drawable/test2"/>
+
+</LinearLayout>
