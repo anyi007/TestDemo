@@ -17,6 +17,7 @@ import com.example.lql.testdemo.ui.activity.FloatingactionButtonActivity;
 import com.example.lql.testdemo.ui.activity.GildeActivity;
 import com.example.lql.testdemo.ui.activity.HotwordsActivity;
 import com.example.lql.testdemo.ui.activity.MyHRecycleActivity;
+import com.example.lql.testdemo.ui.activity.MyViewActivity;
 import com.example.lql.testdemo.ui.activity.RecyclerviewCardGalleryActivity;
 import com.example.lql.testdemo.ui.activity.RetrofitActivity;
 import com.example.lql.testdemo.ui.activity.RxJavaActivity;
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private android.widget.Button EventBusButton;
     private android.widget.Button ShopButton;
     private android.widget.Button GuideButton;
+    private android.widget.Button MoveviewButton;
 
 
 //    MoveImageview mImageView;
@@ -178,6 +180,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         this.GuideButton.setOnClickListener(this);
 
 
+        //新手引导
+        this.MoveviewButton = (Button) findViewById(R.id.moveview_button);
+        this.MoveviewButton.setOnClickListener(this);
+
+
     }
 
     @Override
@@ -271,6 +278,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.guide_button://新手引导
                 startActivity(new Intent(MainActivity.this, ShopMainActivity.class));
+                break;
+
+            case R.id.moveview_button://新手引导
+                startActivity(new Intent(MainActivity.this, MyViewActivity.class));
                 break;
 
 

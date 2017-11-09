@@ -6,7 +6,10 @@ import android.graphics.Bitmap;
 import android.graphics.Rect;
 import android.util.DisplayMetrics;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
+
+import static com.umeng.analytics.pro.x.W;
 
 /**
  * 获得屏幕相关的辅助类
@@ -77,6 +80,9 @@ public class ScreenUtils
 		}
 		return statusHeight;
 	}
+
+
+
 
 	/**
 	 * 获取当前屏幕截图，包含状态栏

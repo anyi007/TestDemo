@@ -1,2 +1,2 @@
-include ':app', ':RecyclerviewCardGalleryLibrary', ':shopdemo', ':choosetime'
+include ':app', ':RecyclerviewCardGalleryLibrary', ':shopdemo', ':choosetime', ':LRecyclerview_library'
 

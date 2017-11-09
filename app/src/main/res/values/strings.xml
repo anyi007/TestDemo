@@ -24,6 +24,7 @@
     <string name="title_activity_RetrofitActivity">Retrofit</string>
     <string name="title_activity_MyHRecycleActivity">横向滑动的recyclerview</string>
     <string name="title_activity_EventBusActivity">事件总线</string>
+    <string name="title_activity_MyViewActivity">跟随手指移动</string>
     <string name="title_activity_ShopMainActivity">商场效果</string>
 
 
