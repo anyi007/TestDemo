@@ -10,9 +10,10 @@ public class FinalData {
 
     public final static String VERSIONCODE = "VERSIONCODE";//忽略的版本号
     public final static String EXITAPP = "COM.EXAMOPLE.LQL.EXITAPP";//退出程序的广播
-
-
     //=====================================================================================商城模块==========================================================================
+
+
+    public final static String USERID = "USERID";//用户id
 
     //订单状态
     public final static int UNPAID = 1;//未付款

@@ -7,7 +7,9 @@ import com.example.lql.testdemo.db.bean.shop.CommodityBean;
 import com.example.lql.testdemo.db.bean.shop.CommodityTypeBean;
 import com.example.lql.testdemo.db.bean.shop.NoticeBean;
 import com.example.lql.testdemo.db.bean.shop.UserBean;
+import com.example.lql.testdemo.utils.FinalData;
 import com.example.lql.testdemo.utils.LogUtils;
+import com.example.lql.testdemo.utils.PreferenceUtils;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -44,6 +46,9 @@ public class InitShopManager {
         if (userBeen != null) {
             LogUtils.Loge("初始化用户成功");
             for (int i = 0; i < userBeen.size(); i++) {
+                if(userBeen.get(i).getUserName().equals("小米")){
+                    PreferenceUtils.setString(FinalData.USERID,userBeen.get(i).getUserId()+"");
+                }
                 LogUtils.Loge("用户：" + i + ":" + userBeen.get(i).toString());
             }
         } else {

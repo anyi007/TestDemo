@@ -9,6 +9,7 @@ import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -70,7 +71,7 @@ public class CommodityDetailsActivity extends AppCompatActivity implements View.
     TextView mTagViewGroupTop;
     LinearLayout addressLy;
 
-    RecyclerView mRecyclerView;//顶部的推荐
+//    RecyclerView mRecyclerView;//顶部的推荐
 
 
     TabLayout mTabLayout;
@@ -79,8 +80,7 @@ public class CommodityDetailsActivity extends AppCompatActivity implements View.
     private SimpleFragmentPagerAdapter pagerAdapter;
     private ArrayList<Fragment> list_fragment = new ArrayList<>();                                //定义要装fragment的列表
     private ArrayList<String> list_title = new ArrayList<>();                                //定义要装fragment的列表
-//    private CommodityOneFragment mOneFragment;              //商品详情fragment
-//    private CommodityTwoFragment mTwoFragment;            //商品评价fragment
+
 
     Long commodityId;
     CommodityBean commodityById = null;
@@ -128,8 +128,7 @@ public class CommodityDetailsActivity extends AppCompatActivity implements View.
         mTagViewGroupTop = (TextView) findViewById(R.id.commodity_top_size_top);
         addressTv = (TextView) findViewById(R.id.commodity_top_address);
         addressLy = (LinearLayout) findViewById(R.id.commodity_top_address_ly);
-        mRecyclerView = (RecyclerView) findViewById(R.id.commodity_top_recy);
-
+        addressLy.setOnClickListener(this);
 
         //第二个页面的
         mTabLayout = (TabLayout) findViewById(R.id.commodity_bottom_tabs);
@@ -147,25 +146,8 @@ public class CommodityDetailsActivity extends AppCompatActivity implements View.
         mViewPager.setAdapter(pagerAdapter);
         mTabLayout.setupWithViewPager(mViewPager);
         mTabLayout.setTabMode(TabLayout.MODE_FIXED);
-//        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-//            @Override
-//            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-//
-//            }
-//
-//            @Override
-//            public void onPageSelected(int position) {
-//
-//            }
-//
-//            @Override
-//            public void onPageScrollStateChanged(int state) {
-//
-//            }
-//        });
+
         commodityId = getIntent().getLongExtra("commodityId", -1);
-
-
         commodityById = CommodityBeanManager.getCommodityById(commodityId);
 
         setView();
@@ -236,7 +218,6 @@ public class CommodityDetailsActivity extends AppCompatActivity implements View.
                         addressTv.setText("配送至：" + addressBeen.get(i).getCity() + addressBeen.get(i).getArea() + addressBeen.get(i).getDetailedAddress());
                     }
                 }
-
                 if (!m) {
                     addressTv.setText("配送至：" + addressBeen.get(0).getCity() + addressBeen.get(0).getArea() + addressBeen.get(0).getDetailedAddress());
                 }
@@ -244,19 +225,6 @@ public class CommodityDetailsActivity extends AppCompatActivity implements View.
                 addressTv.setText("请添加收货地址");
             }
 
-
-            //为你推荐
-            List<CommodityBean> commodityBeen = CommodityBeanManager.LoadCommodityByType(commodityById.getCommodityTypeId());
-
-            for (int i = 0; i < commodityBeen.size(); i++) {
-                if (commodityBeen.get(i).getCommodityId() != commodityById.getCommodityTypeId()) {
-                    commodityBeanArrayList.add(commodityBeen.get(i));
-                }
-            }
-
-//            int number = commodityBeanArrayList.size();
-//            mRecyclerView.setLayoutManager(new GridLayoutManager(this, number));
-//            mRecyclerView.setAdapter(new );
 
         } else {
             LogUtils.Loge("没有这个商品：" + commodityId);
@@ -273,6 +241,10 @@ public class CommodityDetailsActivity extends AppCompatActivity implements View.
             case R.id.top_back_ly:
                 finish();
                 break;
+            case R.id.commodity_top_address_ly://收获地址
+
+                break;
+
 
             default:
                 break;

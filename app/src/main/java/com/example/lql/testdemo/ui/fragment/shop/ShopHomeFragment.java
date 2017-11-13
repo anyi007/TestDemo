@@ -18,6 +18,7 @@ import com.example.lql.testdemo.ui.BaseFragment;
 import com.example.lql.testdemo.ui.activity.shop.CommodityDetailsActivity;
 import com.example.lql.testdemo.ui.activity.shop.NoticeListActivity;
 import com.example.lql.testdemo.utils.LogUtils;
+import com.example.lql.testdemo.utils.T;
 import com.example.lql.testdemo.utils.gildeUtils.GlidePicUtils;
 import com.example.lql.testdemo.veiw.SwitchViewGroup;
 import com.github.jdsjlzx.interfaces.OnItemClickListener;
@@ -89,6 +90,12 @@ public class ShopHomeFragment extends BaseFragment {
         mLRecyclerViewAdapter = new LRecyclerViewAdapter(mShopHomeFragmentAdapter);
         mLRecyclerViewAdapter.addHeaderView(headView);
         mLRecyclerView.setAdapter(mLRecyclerViewAdapter);
+
+        //禁用下拉刷新功能
+        mLRecyclerView.setPullRefreshEnabled(false);
+        //禁用自动加载更多功能
+        mLRecyclerView.setLoadMoreEnabled(false);
+
         getHotData();
         getNotic();
         getBagData();
@@ -165,11 +172,9 @@ public class ShopHomeFragment extends BaseFragment {
         mContentBanner.setDelegate(new BGABanner.Delegate<ImageView, String>() {
             @Override
             public void onBannerItemClick(BGABanner banner, ImageView itemView, String model, int position) {
-//                Toast.makeText(banner.getContext(), "点击了" + position, Toast.LENGTH_SHORT).show();
-                Log.e("###", "点击了" + position);
+                T.shortToast(getActivity(),"点击了第"+position+"个数");
             }
         });
     }
-
 
 }

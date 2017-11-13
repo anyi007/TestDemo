@@ -11,6 +11,7 @@
     <cn.bingoogolapple.bgabanner.BGABanner
         android:id="@+id/commodity_top_banner"
         style="@style/BannerDefaultStyle"
+        android:layout_height="@dimen/px_500"
         app:banner_transitionEffect="depth"/>
 
     <!--商品名称-->
@@ -187,23 +188,6 @@
     </LinearLayout>
 
 
-    <!--为你推荐-->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/px_20"
-        android:paddingLeft="@dimen/px_30"
-        android:paddingRight="@dimen/px_30"
-        android:text="为你推荐"
-        android:textColor="@color/color_333"/>
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/commodity_top_recy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/px_20">
-
-    </android.support.v7.widget.RecyclerView>
 
 
     <LinearLayout
